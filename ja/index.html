@@ -10,7 +10,6 @@
         body { background-color: #f5f6fa; color: #2d3436; padding: 40px 0; }
         .container { max-width: 1200px; width: 92%; margin: 0 auto; position: relative; }
         
-        /* 🌐 언어 스위처 디자인 */
         .lang-switcher { position: absolute; top: -15px; right: 0; display: flex; gap: 8px; z-index: 1000; }
         .lang-link { text-decoration: none; background: #ffffff; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: #2d3436; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; border: 1px solid #e4e7eb; }
         .lang-link:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #6c5ce7; }
@@ -46,11 +45,15 @@
         
         .badge { display: inline-block; padding: 6px 16px; background-color: #6c5ce7; color: white; border-radius: 20px; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }
         #color-palette-display { display: flex; gap: 15px; margin: 20px 0; }
+
+        /* 📸 비디오 박스 및 안면 가이드라인 */
+        .camera-wrapper { position: relative; width: 100%; overflow: hidden; border-radius: 12px; margin-top: 15px; background: #000; }
+        #webcam { width: 100%; height: auto; display: block; transform: scaleX(-1); }
+        .face-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 70%; border: 2px dashed rgba(255,255,255,0.6); border-radius: 50%; box-shadow: 0 0 0 9999px rgba(0,0,0,0.4); pointer-events: none; }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 🌐 언어 내비게이션 바 링크 추가 -->
         <div class="lang-switcher">
             <a href="/ko/" id="lang-ko" class="lang-link">🇰🇷 KO</a>
             <a href="/en/" id="lang-en" class="lang-link">🇺🇸 EN</a>
@@ -67,7 +70,7 @@
             <div class="left-column">
                 <section class="card intro-card">
                     <h3>✨ パーソナルカラーガイド</h3>
-                    <p>パーソナルカラーは、あなたの肌、髪、瞳の色に最も調和する色のグループです。自分に合うトーンを見つけることで、顔色が明るくなります。</p>
+                    <p>パーソナルカラーは、あなたの肌、髪、瞳の色에 가장 조화를 이루는 색상 그룹입니다. 자신에게 맞는 톤을 찾으면 얼굴색이 밝아집니다.</p>
                 </section>
                 <section class="card celeb-card">
                     <h3>👑 代表的なセレブ</h3>
@@ -106,15 +109,28 @@
                 
                 <section class="card upload-card">
                     <h3>📸 AIカメラ分析 (Beta)</h3>
-                    <p style="margin-bottom: 20px;">正確な分析のため、明るい場所でカメラをまっすぐ見てください。データは保存されません。</p>
-                    <button class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;" onclick="alert('Camera core logic connection step is next!');">カメラを起動する</button>
+                    <p style="margin-bottom: 15px;">正確な分析のため、明るい場所でカメラをまっすぐ見てください。データは保存されません。</p>
+                    <button id="init-cam-btn" class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;">カメラを起動する</button>
+                    
+                    <div id="camera-zone" class="hidden">
+                        <div class="camera-wrapper">
+                            <video id="webcam" autoplay playsinline muted></video>
+                            <div class="face-overlay"></div>
+                        </div>
+                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">📸 撮影してAI分析する</button>
+                    </div>
+
+                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">
+                        ⏳ AIが肌トーンを分析中...
+                    </div>
+                    <canvas id="calc-canvas" class="hidden"></canvas>
                 </section>
             </div>
         </div>
     </div>
     <script>
-        // 현재 페이지 활성화 표시
         document.getElementById('lang-ja').classList.add('active');
+        const camErrorMsg = "カメラを起動できません。権限を確認してください。";
     </script>
     <script src="script.js"></script>
 </body>

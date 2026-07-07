@@ -11,6 +11,7 @@ lang_config = {
         'start_btn_txt': '퍼스널 컬러 테스트 시작하기', 'restart_btn_txt': '다시 테스트하기', 'result_main_title': '🎉 당신의 퍼스널 컬러 진단 결과',
         'upload_title': '📸 AI 카메라 분석 및 진단 (Beta)', 'upload_desc': '정확한 분석을 위해 조명이 밝은 곳에서 정면을 응시해 주세요. 데이터는 서버에 저장되지 않습니다.', 'upload_btn': '실시간 카메라 작동하기',
         'js_best_title': '당신을 위한 최적의 컬러 파레트', 'js_guide_title': '추천 스타일링 & 매칭 가이드',
+        'cam_capture_btn': '📸 사진 촬영 및 AI 분석하기', 'cam_loading': '⏳ AI가 실시간 피부 톤 분석 중...', 'cam_error': '카메라를 시작할 수 없습니다. 권한을 확인해주세요.',
         'q1': '1. 골드와 실버 주얼리 중 어떤 것이 피부를 더 살려주나요?', 'a1_1': '골드를 착용했을 때 피부가 화사해 보인다.', 'a1_2': '실버를 착용했을 때 피부가 투명해 보인다.',
         'q2': '2. 자외선에 장시간 노출되었을 때 피부 반응은 어떤가요?', 'a2_1': '붉어지기보다는 쉽게 그을리고 어두워진다.', 'a2_2': '쉽게 빨갛게 익거나 화상을 입는다.',
         'q3': '3. 주변 사람들에게 자주 듣는 나의 첫인상 분위기는?', 'a3_1': '차분하고 부드러우며 따뜻한 이미지.', 'a3_2': '선명하고 깨끗하며 시크한 이미지.',
@@ -30,6 +31,7 @@ lang_config = {
         'start_btn_txt': 'Start Analysis Quiz', 'restart_btn_txt': 'Restart Quiz', 'result_main_title': '🎉 Your Personal Color Result',
         'upload_title': '📸 AI Camera Analysis (Beta)', 'upload_desc': 'Please face the camera in a brightly lit environment. No video data leaves your local device.', 'upload_btn': 'Activate Live Camera',
         'js_best_title': 'Best Color Palette for You', 'js_guide_title': 'Styling & Matching Guide',
+        'cam_capture_btn': '📸 Take Photo & Analyze', 'cam_loading': '⏳ AI Analyzing Skin Tone...', 'cam_error': 'Cannot access camera. Please check permissions.',
         'q1': '1. Which looks better on you, gold or silver accessories?', 'a1_1': 'Gold items make my skin look bright and warm.', 'a1_2': 'Silver items look sophisticated and clear.',
         'q2': '2. How does your skin react to prolonged sun exposure?', 'a2_1': 'It tans easily and turns darker.', 'a2_2': 'It gets red or sunburned easily.',
         'q3': '3. What kind of first impression vibe do you usually get?', 'a3_1': 'Calm, soft, warm, or friendly image.', 'a3_2': 'Clear, clean, sophisticated, or chic image.',
@@ -42,13 +44,14 @@ lang_config = {
     'ja': {
         'lang_attr': 'ja', 'title': 'パーソナルカラー診断', 'header_title': 'パーソナルカラー診断',
         'intro_title': '✨ パーソナルカラーガイド',
-        'intro_desc': 'パーソナルカラーは、あなたの肌、髪、瞳の色に最も調和する色のグループです。自分に合うトーンを見つけることで、顔色が明るくなります。',
+        'intro_desc': 'パーソナルカラーは、あなたの肌、髪、瞳の色에 가장 조화를 이루는 색상 그룹입니다. 자신에게 맞는 톤을 찾으면 얼굴색이 밝아집니다.',
         'celeb_title': '👑 代表的なセレブ',
         'celeb_desc': '<li><span style="color:#ff7675;font-weight:bold;">イエベ春:</span> 本田翼, 石原さとみ</li><li><span style="color:#74b9ff;font-weight:bold;">ブルベ夏:</span> 新垣結衣, 綾瀬はるか</li><li><span style="color:#b2bec3;font-weight:bold;">イエベ秋:</span> 北川景子, 安室奈美恵</li><li><span style="color:#6c5ce7;font-weight:bold;">ブルベ冬:</span> 小松菜奈, 水原希子</li>',
         'quiz_main_title': '🎨 あなたのパーソナルカラー診断', 'quiz_main_desc': '簡単な視覚的な質問に答えて、あなたに最適な季節のカラーパレットを見つけましょう。',
         'start_btn_txt': '診断を始める', 'restart_btn_txt': 'もう一度診断する', 'result_main_title': '🎉 診断結果',
         'upload_title': '📸 AIカメラ分析 (Beta)', 'upload_desc': '正確な分析のため、明るい場所でカメラをまっすぐ見てください。データは保存されません。', 'upload_btn': 'カメラを起動する',
         'js_best_title': 'あなたに最適なカラー', 'js_guide_title': 'スタイリングガイド',
+        'cam_capture_btn': '📸 撮影してAI分析する', 'cam_loading': '⏳ AIが肌トーンを分析中...', 'cam_error': 'カメラを起動できません。権限を確認してください。',
         'q1': '1. ゴールドとシルバーのアクセサリー、どちらが肌に馴染みますか？', 'a1_1': 'ゴールドをつけると肌が明るく見える。', 'a1_2': 'シルバーをつけると透明感が出る。',
         'q2': '2. 日焼けした後の肌はどうなりますか？', 'a2_1': '赤くならずに、すぐに黒くなる。', 'a2_2': 'すぐに赤くなったり、ヒリヒリする。',
         'q3': '3. 周りからよく言われる第一印象は？', 'a3_1': '落ち着いていて温かみのある印象。', 'a3_2': 'すっきりとしていてクールな印象。',
@@ -68,7 +71,8 @@ lang_config = {
         'start_btn_txt': 'Comenzar Test', 'restart_btn_txt': 'Reiniciar Test', 'result_main_title': '🎉 Tu Resultado',
         'upload_title': '📸 Análisis de Cámara AI (Beta)', 'upload_desc': 'Mira a la cámara en un ambiente bien iluminado. Ningún dato sale de tu dispositivo.', 'upload_btn': 'Activar Cámara',
         'js_best_title': 'Tu Mejor Paleta de Colores', 'js_guide_title': 'Guía de Estilo',
-        'q1': '1. ¿Qué te queda mejor, accesorios de oro o plata?', 'a1_1': 'El oro hace que mi piel luzca brillante.', 'a1_2': 'La plata me da un aspecto sofisticado.',
+        'cam_capture_btn': '📸 Capturar y Analizar con IA', 'cam_loading': '⏳ IA Analizando Tono de Piel...', 'cam_error': 'No se puede acceder a la cámara. Revisa los permisos.',
+        'q1': '1. ¿Qué te queda mejor, accesorios de oro o plata?', 'a1_1': 'El oro hace que mi piel luca brillante.', 'a1_2': 'La plata me da un aspecto sofisticado.',
         'q2': '2. ¿Cómo reacciona tu piel al sol?', 'a2_1': 'Me bronceo fácilmente.', 'a2_2': 'Me enrojezco o me quemo fácilmente.',
         'q3': '3. ¿Cuál es tu primera impresión habitual?', 'a3_1': 'Imagen tranquila, suave y cálida.', 'a3_2': 'Imagen clara, limpia y sofisticada.',
         'q4': '4. ¿De qué color es tu cabello u ojos naturales?', 'a4_1': 'Tono marrón suave o castaño claro.', 'a4_2': 'Negro intenso o tono carbón muy oscuro.',
@@ -87,6 +91,7 @@ lang_config = {
         'start_btn_txt': '开始测试', 'restart_btn_txt': '重新测试', 'result_main_title': '🎉 您的个人色彩结果',
         'upload_title': '📸 AI 相机分析 (Beta)', 'upload_desc': '请在光线充足的环境下面对相机。数据不会离开您的设备。', 'upload_btn': '启动相机',
         'js_best_title': '最适合您的调色板', 'js_guide_title': '造型与搭配指南',
+        'cam_capture_btn': '📸 拍照并进行 AI 分析', 'cam_loading': '⏳ AI 正在分析肤色...', 'cam_error': '无法访问相机，请检查权限设置。',
         'q1': '1. 金色和银色饰品，哪个更适合您？', 'a1_1': '金色让我的皮肤看起来明亮温暖。', 'a1_2': '银色让我的皮肤看起来干净通透。',
         'q2': '2. 长时间日晒后您的皮肤反应如何？', 'a2_1': '很容易晒黑。', 'a2_2': '很容易发红或晒伤。',
         'q3': '3. 您通常给人留下的第一印象是什么？', 'a3_1': '平静、柔和、温暖或亲切的形象。', 'a3_2': '清晰、干净、精致或干练的形象。',
@@ -110,7 +115,6 @@ html_template = """<!DOCTYPE html>
         body {{ background-color: #f5f6fa; color: #2d3436; padding: 40px 0; }}
         .container {{ max-width: 1200px; width: 92%; margin: 0 auto; position: relative; }}
         
-        /* 🌐 언어 스위처 디자인 */
         .lang-switcher {{ position: absolute; top: -15px; right: 0; display: flex; gap: 8px; z-index: 1000; }}
         .lang-link {{ text-decoration: none; background: #ffffff; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: #2d3436; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; border: 1px solid #e4e7eb; }}
         .lang-link:hover {{ transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #6c5ce7; }}
@@ -146,11 +150,15 @@ html_template = """<!DOCTYPE html>
         
         .badge {{ display: inline-block; padding: 6px 16px; background-color: #6c5ce7; color: white; border-radius: 20px; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }}
         #color-palette-display {{ display: flex; gap: 15px; margin: 20px 0; }}
+
+        /* 📸 비디오 박스 및 안면 가이드라인 */
+        .camera-wrapper {{ position: relative; width: 100%; overflow: hidden; border-radius: 12px; margin-top: 15px; background: #000; }}
+        #webcam {{ width: 100%; height: auto; display: block; transform: scaleX(-1); }}
+        .face-overlay {{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 70%; border: 2px dashed rgba(255,255,255,0.6); border-radius: 50%; box-shadow: 0 0 0 9999px rgba(0,0,0,0.4); pointer-events: none; }}
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 🌐 언어 내비게이션 바 링크 추가 -->
         <div class="lang-switcher">
             <a href="/ko/" id="lang-ko" class="lang-link">🇰🇷 KO</a>
             <a href="/en/" id="lang-en" class="lang-link">🇺🇸 EN</a>
@@ -206,22 +214,264 @@ html_template = """<!DOCTYPE html>
                 
                 <section class="card upload-card">
                     <h3>{upload_title}</h3>
-                    <p style="margin-bottom: 20px;">{upload_desc}</p>
-                    <button class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;" onclick="alert('Camera core logic connection step is next!');">{upload_btn}</button>
+                    <p style="margin-bottom: 15px;">{upload_desc}</p>
+                    <button id="init-cam-btn" class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;">{upload_btn}</button>
+                    
+                    <div id="camera-zone" class="hidden">
+                        <div class="camera-wrapper">
+                            <video id="webcam" autoplay playsinline muted></video>
+                            <div class="face-overlay"></div>
+                        </div>
+                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">{cam_capture_btn}</button>
+                    </div>
+
+                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">
+                        {cam_loading}
+                    </div>
+                    <canvas id="calc-canvas" class="hidden"></canvas>
                 </section>
             </div>
         </div>
     </div>
     <script>
-        // 현재 페이지 활성화 표시
         document.getElementById('lang-{lang_attr}').classList.add('active');
+        const camErrorMsg = "{cam_error}";
     </script>
     <script src="script.js"></script>
 </body>
 </html>
 """
 
-print("🚀 전 세계 모든 페이지에 [우측 상단 언어 전환 탭] 장착 시작...")
+js_template = """const questions = [
+    {{
+        question: "{q1}",
+        answers: [
+            {{ text: "{a1_1}", score: {{ warm: 2, cool: 0 }} }},
+            {{ text: "{a1_2}", score: {{ warm: 0, cool: 2 }} }}
+        ]
+    }},
+    {{
+        question: "{q2}",
+        answers: [
+            {{ text: "{a2_1}", score: {{ warm: 1, cool: 0 }} }},
+            {{ text: "{a2_2}", score: {{ warm: 0, cool: 1 }} }}
+        ]
+    }},
+    {{
+        question: "{q3}",
+        answers: [
+            {{ text: "{a3_1}", score: {{ warm: 1, cool: 0 }} }},
+            {{ text: "{a3_2}", score: {{ warm: 0, cool: 1 }} }}
+        ]
+    }},
+    {{
+        question: "{q4}",
+        answers: [
+            {{ text: "{a4_1}", score: {{ warm: 1, cool: 0 }} }},
+            {{ text: "{a4_2}", score: {{ warm: 0, cool: 1 }} }}
+        ]
+    }}
+];
+
+const results = {{
+    spring: {{ title: "Spring Warm", desc: "{res_spring}", colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF"] }},
+    summer: {{ title: "Summer Cool", desc: "{res_summer}", colors: ["#E8A0BF", "#B9F3FC", "#A7BBC7", "#E1E5EA"] }},
+    autumn: {{ title: "Autumn Warm", desc: "{res_autumn}", colors: ["#826F66", "#B85C38", "#5C3D2E", "#E0C097"] }},
+    winter: {{ title: "Winter Cool", desc: "{res_winter}", colors: ["#000000", "#FFFFFF", "#1A1A40", "#7A0BC0"] }}
+}};
+
+let currentQuestionIndex = 0;
+let userScores = {{ warm: 0, cool: 0 }};
+let localStream = null;
+
+const startView = document.getElementById('start-view');
+const questionView = document.getElementById('question-view');
+const resultView = document.getElementById('result-view');
+const questionText = document.getElementById('question-text');
+const answerButtons = document.getElementById('answer-buttons');
+const progressBar = document.getElementById('progress');
+
+// 📸 카메라 제어 DOM 요소들
+const initCamBtn = document.getElementById('init-cam-btn');
+const cameraZone = document.getElementById('camera-zone');
+const cameraLoading = document.getElementById('camera-loading');
+const webcam = document.getElementById('webcam');
+const captureBtn = document.getElementById('capture-btn');
+const calcCanvas = document.getElementById('calc-canvas');
+
+document.getElementById('start-btn').addEventListener('click', startQuiz);
+document.getElementById('restart-btn').addEventListener('click', startQuiz);
+
+function startQuiz() {{
+    stopCamera();
+    currentQuestionIndex = 0;
+    userScores = {{ warm: 0, cool: 0 }};
+    startView.classList.add('hidden');
+    resultView.classList.add('hidden');
+    questionView.classList.remove('hidden');
+    showQuestion();
+}}
+
+function showQuestion() {{
+    resetState();
+    const currentQuestion = questions[currentQuestionIndex];
+    questionText.innerText = currentQuestion.question;
+    progressBar.style.width = `${{(currentQuestionIndex / questions.length) * 100}}%`;
+
+    currentQuestion.answers.forEach(answer => {{
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        button.addEventListener('click', () => selectAnswer(answer.score));
+        answerButtons.appendChild(button);
+    }});
+}}
+
+function resetState() {{
+    while (answerButtons.firstChild) {{
+        answerButtons.removeChild(answerButtons.firstChild);
+    }}
+}}
+
+function selectAnswer(score) {{
+    for (const key in score) {{
+        if (userScores.hasOwnProperty(key)) userScores[key] += score[key];
+    }}
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {{
+        showQuestion();
+    }} else {{
+        showResult();
+    }}
+}}
+
+function showResult(forcedTone = null) {{
+    questionView.classList.add('hidden');
+    resultView.classList.remove('hidden');
+    startView.classList.add('hidden');
+    progressBar.style.width = '100%';
+
+    let finalTone = "spring";
+    if (forcedTone) {{
+        finalTone = forcedTone;
+    }} else {{
+        if (userScores.warm >= userScores.cool) {{
+            finalTone = userScores.warm > 3 ? "autumn" : "spring";
+        }} else {{
+            finalTone = userScores.cool > 3 ? "winter" : "summer";
+        }}
+    }}
+    
+    const resultData = results[finalTone];
+    document.getElementById('result-tags').innerHTML = `<span class="badge">${{resultData.title}}</span>`;
+    
+    document.getElementById('best-color-title').innerText = "{js_best_title}";
+    document.getElementById('match-guide-title').innerText = "{js_guide_title}";
+    document.getElementById('result-description').innerText = resultData.desc;
+
+    const paletteZone = document.getElementById('color-palette-display');
+    paletteZone.innerHTML = "";
+    resultData.colors.forEach(clr => {{
+        const circle = document.createElement('div');
+        circle.style.width = "50px";
+        circle.style.height = "50px";
+        circle.style.borderRadius = "50%";
+        circle.style.backgroundColor = clr;
+        circle.style.boxShadow = "0 3px 6px rgba(0,0,0,0.1)";
+        paletteZone.appendChild(circle);
+    }});
+    
+    // 결과창으로 스크롤 부드럽게 이동
+    document.getElementById('quiz-container').scrollIntoView({{ behavior: 'smooth' }});
+}}
+
+// 📸 카메라 제어 핵심 로직 파트
+initCamBtn.addEventListener('click', async () => {{
+    try {{
+        localStream = await navigator.mediaDevices.getUserMedia({{
+            video: {{ facingMode: "user", width: {{ ideal: 640 }}, height: {{ ideal: 480 }} }},
+            audio: false
+        }});
+        webcam.srcObject = localStream;
+        initCamBtn.classList.add('hidden');
+        cameraZone.classList.remove('hidden');
+    }} catch (err) {{
+        alert(camErrorMsg);
+        console.error(err);
+    }}
+}});
+
+captureBtn.addEventListener('click', () => {{
+    if (!localStream) return;
+    
+    cameraZone.classList.add('hidden');
+    cameraLoading.classList.remove('hidden');
+    
+    // 🔍 픽셀 정밀 진단 시스템 가동 (Canvas 스냅샷)
+    const ctx = calcCanvas.getContext('2d');
+    calcCanvas.width = webcam.videoWidth || 640;
+    calcCanvas.height = webcam.videoHeight || 480;
+    
+    // 좌우반전 상태 보정 후 캔버스 드로잉
+    ctx.translate(calcCanvas.width, 0);
+    ctx.scale(-1, 1);
+    ctx.drawImage(webcam, 0, 0, calcCanvas.width, calcCanvas.height);
+    
+    // 화면 중앙 영역(얼굴이 위치하는 곳) 픽셀 추출
+    const sampleWidth = 80;
+    const sampleHeight = 80;
+    const sampleX = Math.floor(calcCanvas.width / 2) - 40;
+    const sampleY = Math.floor(calcCanvas.height / 2) - 40;
+    
+    const imgData = ctx.getImageData(sampleX, sampleY, sampleWidth, sampleHeight);
+    const data = imgData.data;
+    
+    let rSum = 0, gSum = 0, bSum = 0, totalPixels = 0;
+    for (let i = 0; i < data.length; i += 4) {{
+        rSum += data[i];
+        gSum += data[i+1];
+        bSum += data[i+2];
+        totalPixels++;
+    }}
+    
+    const avgR = rSum / totalPixels;
+    const avgG = gSum / totalPixels;
+    const avgB = bSum / totalPixels;
+    
+    // 🎨 수식 알고리즘: 노란기(G)와 붉은기(R) 대비 푸른기(B) 비중을 대조하여 언더톤 분석
+    const warmValue = (avgR * 0.5 + avgG * 0.5) - avgB;
+    let cameraResultTone = "spring";
+    
+    if (warmValue > 35) {{
+        // 웜톤 판정: 밝기(R 비율) 기준 세부 분류
+        cameraResultTone = avgR > 180 ? "spring" : "autumn";
+    }} else {{
+        // 쿨톤 판정: 명도 및 채도 대비 분류
+        cameraResultTone = (avgR + avgG + avgB) / 3 > 150 ? "summer" : "winter";
+    }}
+    
+    // 🧠 1.5초간 가상의 딥러닝 연산 시뮬레이션 후 결과 노출
+    setTimeout(() => {{
+        cameraLoading.classList.add('hidden');
+        initCamBtn.classList.remove('hidden');
+        stopCamera();
+        showResult(cameraResultTone);
+    }}, 1500);
+}});
+
+function stopCamera() {{
+    if (localStream) {{
+        localStream.getTracks().forEach(track => track.stop());
+        localStream = null;
+    }}
+    webcam.srcObject = null;
+    cameraZone.classList.add('hidden');
+    cameraLoading.classList.add('hidden');
+    initCamBtn.classList.remove('hidden');
+}}
+"""
+
+print("📸 모든 다국어 페이지에 실시간 피부 분석 AI 카메라 연동 시작...")
 
 for folder, configs in lang_config.items():
     if not os.path.exists(folder):
@@ -230,11 +480,14 @@ for folder, configs in lang_config.items():
     with open(f"{folder}/index.html", "w", encoding="utf-8") as f:
         f.write(html_template.format(**configs))
         
-    print(f"🔗 {folder.upper()} 페이지 국기 버튼 인터페이스 장착 성공")
+    with open(f"{folder}/script.js", "w", encoding="utf-8") as f:
+        f.write(js_template.format(**configs))
+        
+    print(f"✅ {folder.upper()} 폴더 카메라 연동 및 알고리즘 주입 완료")
 
-print("\n📦 원격 깃허브 스테이지에 추가 및 푸시 연동...")
+print("\n🚀 업데이트 사항 원격 저장소에 푸시 중...")
 os.system("git add .")
-os.system("git commit -m 'Feat: Add absolute top-right floating language switcher navbar for all subdirectories'")
+os.system("git commit -m 'Feat: Integrate real-time client-side pixel analysis camera system'")
 os.system("git push origin main")
 
-print("\n✨ 모든 작업이 깔끔하게 끝났습니다!")
+print("\n✨ 모든 작업이 완료되었습니다! 20초 후 확인 가능합니다.")
