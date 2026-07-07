@@ -1,53 +1,53 @@
 const questions = [
     {
-        question: "1. 金色饰品和银色饰品中，哪一个更适合您？",
+        question: "1. Which looks better on you, gold or silver accessories?",
         answers: [
-            { text: "金色饰品让皮肤显得更有光泽、更温暖。", score: { warm: 2, cool: 0 } },
-            { text: "银色饰品显得更有高级感，气色更通透。", score: { warm: 0, cool: 2 } }
+            { text: "Gold items make my skin look bright and warm.", score: { warm: 2, cool: 0 } },
+            { text: "Silver items look sophisticated and clear.", score: { warm: 0, cool: 2 } }
         ]
     },
     {
-        question: "2. 长时间晒太阳时，您的皮肤有什么反应？",
+        question: "2. How does your skin react to prolonged sun exposure?",
         answers: [
-            { text: "容易晒黑，肤色变深。", score: { warm: 1, cool: 0 } },
-            { text: "容易发红，或者皮肤有灼热感。", score: { warm: 0, cool: 1 } }
+            { text: "It tans easily and turns darker.", score: { warm: 1, cool: 0 } },
+            { text: "It gets red or sunburned easily.", score: { warm: 0, cool: 1 } }
         ]
     },
     {
-        question: "3. 平时经常听到别人评价你的第一印象是？",
+        question: "3. What kind of first impression vibe do you usually get?",
         answers: [
-            { text: "沉稳、温柔，或是温暖具有亲和力。", score: { warm: 1, cool: 0 } },
-            { text: "清爽、干净，或是冷艳具有高级感。", score: { warm: 0, cool: 1 } }
+            { text: "Calm, soft, warm, or friendly image.", score: { warm: 1, cool: 0 } },
+            { text: "Clear, clean, sophisticated, or chic image.", score: { warm: 0, cool: 1 } }
         ]
     },
     {
-        question: "4. 您的原生发色（未染色前）或瞳孔颜色更接近？",
+        question: "4. What is your natural hair or eye color closer to?",
         answers: [
-            { text: "柔和的棕色或偏浅的栗色调。", score: { warm: 1, cool: 0 } },
-            { text: "浓郁的纯黑或非常深的冷深灰。", score: { warm: 0, cool: 1 } }
+            { text: "Soft brown or light warm brown tone.", score: { warm: 1, cool: 0 } },
+            { text: "Sharp black or very dark charcoal tone.", score: { warm: 0, cool: 1 } }
         ]
     }
 ];
 
 const results = {
     spring: { 
-        title: "春季暖色调 (Spring Warm)", 
-        desc: "您是拥有活泼开朗与温暖能量的‘春季暖色调’！明亮温暖的鲜艳色最能衬托您的好气色。香橙色、珊瑚粉、明黄色是您的本命色。",
+        title: "Spring Warm (봄 웜톤)", 
+        desc: "You possess a vibrant and warm energy! Pastel and vivid warm colors bring out your natural glow. Peach, coral, and honey camel are your absolute best colors.",
         colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF"]
     },
     summer: { 
-        title: "夏季冷色调 (Summer Cool)", 
-        desc: "您是拥有清澈干净且理智氛围的‘夏季冷色调’！带有柔和灰调的冰蓝色系能让您的肤色更加白皙通透。薰衣草紫、天空蓝极力推荐。",
+        title: "Summer Cool (여름 쿨톤)", 
+        desc: "You have a clear, refreshing, and elegant aura! Muted pastel tones with blue undertones provide a natural lifting effect. Lavender and sky blue suit you perfectly.",
         colors: ["#E8A0BF", "#B9F3FC", "#A7BBC7", "#E1E5EA"]
     },
     autumn: { 
-        title: "秋季暖色调 (Autumn Warm)", 
-        desc: "您是拥有沉稳且高级氛围的‘秋季暖色调’！富有浓郁大自然气息的军绿色、复古红、脏橘色能将您的都市轻奢感拉满。",
+        title: "Autumn Warm (가을 웜톤)", 
+        desc: "You project a deep, rich, and luxurious atmosphere! Earthy natural colors like khaki, deep burgundy, and mustard maximize your sophisticated charm.",
         colors: ["#826F66", "#B85C38", "#5C3D2E", "#E0C097"]
     },
     winter: { 
-        title: "冬季冷色调 (Winter Cool)", 
-        desc: "您是具有现代感与冷艳魅力的‘冬季冷色调’！纯黑、纯白以及饱和度极高的宝蓝色、车厘子红能让您的五官更加立体锐利。",
+        title: "Winter Cool (겨울 쿨톤)", 
+        desc: "You carry a modern, sharp, and charismatic vibe! Pure black, crisp white, and vivid tones like deep navy or magenta make your features look distinctly striking.",
         colors: ["#000000", "#FFFFFF", "#1A1A40", "#7A0BC0"]
     }
 };
@@ -112,7 +112,6 @@ function showResult() {
     resultView.classList.remove('hidden');
     progressBar.style.width = '100%';
 
-    // 간단 스코어 기반 알고리즘 분기
     let finalTone = "spring";
     if (userScores.warm >= userScores.cool) {
         finalTone = userScores.warm > 3 ? "autumn" : "spring";
@@ -123,12 +122,10 @@ function showResult() {
     const resultData = results[finalTone];
     document.getElementById('result-tags').innerHTML = `<span class="badge">${resultData.title}</span>`;
     
-    // 타이틀 라벨 주입
-    document.getElementById('best-color-title').innerText = "专属您的绝美色卡推荐";
-    document.getElementById('match-guide-title').innerText = "全方位穿搭与美妆指南";
+    document.getElementById('best-color-title').innerText = "Best Color Palette for You";
+    document.getElementById('match-guide-title').innerText = "Styling & Matching Guide";
     document.getElementById('result-description').innerText = resultData.desc;
 
-    // 컬러 파레트 서클 렌더링
     const paletteZone = document.getElementById('color-palette-display');
     paletteZone.innerHTML = "";
     resultData.colors.forEach(clr => {

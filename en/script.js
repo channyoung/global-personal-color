@@ -31,22 +31,22 @@ const questions = [
 
 const results = {
     spring: { 
-        title: "Spring Warm", 
+        title: "Spring Warm (봄 웜톤)", 
         desc: "You possess a vibrant and warm energy! Pastel and vivid warm colors bring out your natural glow. Peach, coral, and honey camel are your absolute best colors.",
         colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF"]
     },
     summer: { 
-        title: "Summer Cool", 
+        title: "Summer Cool (여름 쿨톤)", 
         desc: "You have a clear, refreshing, and elegant aura! Muted pastel tones with blue undertones provide a natural lifting effect. Lavender and sky blue suit you perfectly.",
         colors: ["#E8A0BF", "#B9F3FC", "#A7BBC7", "#E1E5EA"]
     },
     autumn: { 
-        title: "Autumn Warm", 
+        title: "Autumn Warm (가을 웜톤)", 
         desc: "You project a deep, rich, and luxurious atmosphere! Earthy natural colors like khaki, deep burgundy, and mustard maximize your sophisticated charm.",
         colors: ["#826F66", "#B85C38", "#5C3D2E", "#E0C097"]
     },
     winter: { 
-        title: "Winter Cool", 
+        title: "Winter Cool (겨울 쿨톤)", 
         desc: "You carry a modern, sharp, and charismatic vibe! Pure black, crisp white, and vivid tones like deep navy or magenta make your features look distinctly striking.",
         colors: ["#000000", "#FFFFFF", "#1A1A40", "#7A0BC0"]
     }
@@ -112,7 +112,6 @@ function showResult() {
     resultView.classList.remove('hidden');
     progressBar.style.width = '100%';
 
-    // 간단 스코어 기반 알고리즘 분기
     let finalTone = "spring";
     if (userScores.warm >= userScores.cool) {
         finalTone = userScores.warm > 3 ? "autumn" : "spring";
@@ -123,12 +122,10 @@ function showResult() {
     const resultData = results[finalTone];
     document.getElementById('result-tags').innerHTML = `<span class="badge">${resultData.title}</span>`;
     
-    // 타이틀 라벨 주입
     document.getElementById('best-color-title').innerText = "Best Color Palette for You";
     document.getElementById('match-guide-title').innerText = "Styling & Matching Guide";
     document.getElementById('result-description').innerText = resultData.desc;
 
-    // 컬러 파레트 서클 렌더링
     const paletteZone = document.getElementById('color-palette-display');
     paletteZone.innerHTML = "";
     resultData.colors.forEach(clr => {
