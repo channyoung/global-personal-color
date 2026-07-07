@@ -8,12 +8,19 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { background-color: #f5f6fa; color: #2d3436; padding: 40px 0; }
-        .container { max-width: 1200px; width: 92%; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 40px; }
+        .container { max-width: 1200px; width: 92%; margin: 0 auto; position: relative; }
+        
+        /* 🌐 언어 스위처 디자인 */
+        .lang-switcher { position: absolute; top: -15px; right: 0; display: flex; gap: 8px; z-index: 1000; }
+        .lang-link { text-decoration: none; background: #ffffff; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: #2d3436; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; border: 1px solid #e4e7eb; }
+        .lang-link:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #6c5ce7; }
+        .lang-link.active { background: #6c5ce7; color: #ffffff; border-color: #6c5ce7; }
+        
+        header { text-align: center; margin-bottom: 40px; margin-top: 25px; }
         header h1 { font-size: 2.4rem; font-weight: 800; background: linear-gradient(135deg, #6c5ce7, #74b9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
         .main-layout-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 35px; align-items: start; }
-        @media (max-width: 950px) { .main-layout-grid { grid-template-columns: 1fr; gap: 25px; } }
+        @media (max-width: 950px) { .main-layout-grid { grid-template-columns: 1fr; gap: 25px; } .lang-switcher { top: -25px; right: 50%; transform: translateX(50%); } header { margin-top: 20px; } }
         
         .card { background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-bottom: 25px; border-left: 5px solid #eee; text-align: left; }
         .intro-card { border-left-color: #a29bfe; }
@@ -43,6 +50,15 @@
 </head>
 <body>
     <div class="container">
+        <!-- 🌐 언어 내비게이션 바 링크 추가 -->
+        <div class="lang-switcher">
+            <a href="/ko/" id="lang-ko" class="lang-link">🇰🇷 KO</a>
+            <a href="/en/" id="lang-en" class="lang-link">🇺🇸 EN</a>
+            <a href="/ja/" id="lang-ja" class="lang-link">🇯🇵 JA</a>
+            <a href="/zh/" id="lang-zh" class="lang-link">🇨🇳 ZH</a>
+            <a href="/es/" id="lang-es" class="lang-link">🇪🇸 ES</a>
+        </div>
+
         <header>
             <h1>Find Your Personal Color</h1>
         </header>
@@ -51,11 +67,11 @@
             <div class="left-column">
                 <section class="card intro-card">
                     <h3>✨ Guide to Personal Color</h3>
-                    <p>Personal color is the curated palette that best complements your natural skin undertones, eyes, and hair. Discovering your tone enhances your radiance, simplifies shopping, and prevents fashion mismatches.</p>
+                    <p>Personal color is the curated palette that best complements your natural skin undertones, eyes, and hair. Discovering your tone enhances your radiance.</p>
                 </section>
                 <section class="card celeb-card">
-                    <h3>👑 Global Representative Celebrities</h3>
-                    <ul><li><span style="color:#ff7675;font-weight:bold;">Spring Warm:</span> Taylor Swift, Blake Lively, Emma Stone, Scarlett Johansson</li><li><span style="color:#74b9ff;font-weight:bold;">Summer Cool:</span> Margot Robbie, Elle Fanning, Amanda Seyfried, Dakota Fanning</li><li><span style="color:#b2bec3;font-weight:bold;">Autumn Warm:</span> Zendaya, Emily Ratajkowski, Jennifer Lopez, Jessica Alba</li><li><span style="color:#6c5ce7;font-weight:bold;">Winter Cool:</span> Anne Hathaway, Dua Lipa, Megan Fox, Lily Collins</li></ul>
+                    <h3>👑 Representative Celebrities</h3>
+                    <ul><li><span style="color:#ff7675;font-weight:bold;">Spring Warm:</span> Taylor Swift, Blake Lively</li><li><span style="color:#74b9ff;font-weight:bold;">Summer Cool:</span> Margot Robbie, Elle Fanning</li><li><span style="color:#b2bec3;font-weight:bold;">Autumn Warm:</span> Zendaya, Jennifer Lopez</li><li><span style="color:#6c5ce7;font-weight:bold;">Winter Cool:</span> Anne Hathaway, Dua Lipa</li></ul>
                 </section>
             </div>
             
@@ -90,12 +106,16 @@
                 
                 <section class="card upload-card">
                     <h3>📸 AI Camera Analysis (Beta)</h3>
-                    <p style="margin-bottom: 20px;">Please face the camera in a brightly lit environment for real-time tone matching. No video data leaves your local device.</p>
+                    <p style="margin-bottom: 20px;">Please face the camera in a brightly lit environment. No video data leaves your local device.</p>
                     <button class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;" onclick="alert('Camera core logic connection step is next!');">Activate Live Camera</button>
                 </section>
             </div>
         </div>
     </div>
+    <script>
+        // 현재 페이지 활성화 표시
+        document.getElementById('lang-en').classList.add('active');
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
