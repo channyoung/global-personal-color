@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パーソナルカラーセルフ診断 - 私に似合うトーンを見つける</title>
+    <meta name="description" content="3秒でわかるパーソナルカラー診断。スプリング、サマー、オータム、ウィンターの各トーン別ベストカラーとスタイリングガイドをチェック。">
+    
+    <link rel="alternate" hreflang="x-default" href="https://yourdomain.com/en/" />
+    <link rel="alternate" hreflang="en" href="https://yourdomain.com/en/" />
+    <link rel="alternate" hreflang="ko" href="https://yourdomain.com/ko/" />
+    <link rel="alternate" hreflang="ja" href="https://yourdomain.com/ja/" />
+    <link rel="alternate" hreflang="es" href="https://yourdomain.com/es/" />
+    <link rel="alternate" hreflang="zh" href="https://yourdomain.com/zh/" />
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "パーソナルカラーのセルフ診断は正確ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "本テストはデータに基づいたガイドを提供します。"
+        }
+      }]
+    }
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/ja/">PaletteTone</a></h1>
+            <nav>
+                <select onchange="location = this.value;">
+                    <option value="/en/" >English</option>
+                    <option value="/ko/" >한국어</option>
+                    <option value="/ja/" selected>日本語</option>
+                    <option value="/es/" >Español</option>
+                    <option value="/zh/" >简体中文</option>
+                </select>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ad-wrapper ad-top" style="min-height:90px; background:#f9f9f9; text-align:center; margin-bottom:20px; line-height:90px; color:#aaa;">ADSENSE_TOP (CLS 방지 영역)</div>
+
+        <section id="quiz-container" class="card">
+            <div id="start-view">
+                <h2>自分だけのパーソナルカラー診断</h2>
+                <p style="color:#636e72; margin: 10px 0 25px 0;">簡単な質問を通じて、あなたの肌のトーンに最もよく似合う人生のカラーとスタイリングマッチングガイドを確認してみてください。</p>
+                <button id="start-btn" class="btn">診断を始める</button>
+            </div>
+
+            <div id="question-view" class="hidden">
+                <div class="progress-bar"><div id="progress"></div></div>
+                <h3 id="question-text" style="margin-bottom:20px; font-size:1.3rem;">質問を読み込み中...</h3>
+                <div id="answer-buttons" class="btn-group"></div>
+            </div>
+
+            <div id="result-view" class="hidden">
+                <h2>あなたに似合うパーソナルカラー診断結果</h2>
+                <div id="result-tags"></div>
+                
+                <h4 id="best-color-title" style="margin-top:25px; margin-bottom:10px; font-weight:600;"></h4>
+                <div id="color-palette-display" style="display:flex; gap:10px; justify-content:center; margin-bottom:25px; flex-wrap:wrap;"></div>
+                
+                <h4 id="match-guide-title" style="margin-bottom:8px; font-weight:600;"></h4>
+                <p id="result-description" style="color:#2d3436; margin-bottom:25px; line-height:1.6; text-align:left; background:#f8f9fa; padding:15px; border-radius:8px;"></p>
+                <button id="restart-btn" class="btn btn-secondary">もう一度テストする</button>
+            </div>
+        </section>
+
+        <div class="ad-wrapper ad-middle" style="min-height:250px; background:#f9f9f9; text-align:center; margin:25px 0; line-height:250px; color:#aaa;">ADSENSE_MIDDLE</div>
+
+        <section class="seo-text-section card">
+            <h2>パーソナルカラーとは何ですか？</h2>
+            <p style="line-height:1.7; color:#4a4a4a;">パーソナルカラーとは、個人が持つ固有の肌や髪の色と調和し、生き生きと魅せるキーカラーのことです。</p>
+        </section>
+
+        <section class="faq-section card">
+            <h2>よくある質問 (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Q. セルフ診断の正確性は？</h3>
+                <p>A. 本テストは、カラー統計データと身体固有の特徴マッチングに基づいており、高い信頼性を持っています。</p>
+            </div>
+        </section>
+
+        <div class="ad-wrapper ad-bottom" style="min-height:90px; background:#f9f9f9; text-align:center; margin-top:25px; line-height:90px; color:#aaa;">ADSENSE_BOTTOM</div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 PaletteTone. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

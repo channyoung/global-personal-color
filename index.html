@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PaletteTone</title>
+    <script>
+        var lang = navigator.language || navigator.userLanguage;
+        lang = lang.toLowerCase();
+        if (lang.indexOf('ko') !== -1) {
+            window.location.href = '/ko/';
+        } else if (lang.indexOf('ja') !== -1) {
+            window.location.href = '/ja/';
+        } else {
+            window.location.href = '/en/';
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting... If it doesn't work, <a href="/ko/">Click here</a>.</p>
+</body>
+</html>
