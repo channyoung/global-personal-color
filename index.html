@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>PaletteTone</title>
+    <title>Find Your Personal Color</title>
     <script>
         var lang = navigator.language || navigator.userLanguage;
         lang = lang.toLowerCase();
@@ -10,6 +10,10 @@
             window.location.href = '/ko/';
         } else if (lang.indexOf('ja') !== -1) {
             window.location.href = '/ja/';
+        } else if (lang.indexOf('es') !== -1) {
+            window.location.href = '/es/';
+        } else if (lang.indexOf('zh') !== -1) {
+            window.location.href = '/zh/';
         } else {
             window.location.href = '/en/';
         }
@@ -50,9 +54,8 @@
     }
     #quiz-container { margin-top: 0 !important; }
     </style>
-
 </head>
 <body>
-    <p>Redirecting... If it doesn't work, <a href="/ko/">Click here</a>.</p>
+    <p>Redirecting... If it doesn't work, <a href="/en/">Click here</a>.</p>
 </body>
 </html>

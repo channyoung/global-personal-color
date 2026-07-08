@@ -1,102 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://palettetone.com/ko/</loc>
+    <loc>https://global-personal-color.vercel.app/ko/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/ko/privacy.html</loc>
+    <loc>https://global-personal-color.vercel.app/ko/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/ko/terms.html</loc>
+    <loc>https://global-personal-color.vercel.app/ko/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/ko/contact.html</loc>
+    <loc>https://global-personal-color.vercel.app/ko/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://global-personal-color.vercel.app/en/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/en/</loc>
+    <loc>https://global-personal-color.vercel.app/en/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/en/privacy.html</loc>
+    <loc>https://global-personal-color.vercel.app/en/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/en/terms.html</loc>
+    <loc>https://global-personal-color.vercel.app/en/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://global-personal-color.vercel.app/ja/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/en/contact.html</loc>
+    <loc>https://global-personal-color.vercel.app/ja/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/ja/</loc>
+    <loc>https://global-personal-color.vercel.app/ja/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/ja/privacy.html</loc>
+    <loc>https://global-personal-color.vercel.app/ja/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://global-personal-color.vercel.app/es/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/ja/terms.html</loc>
+    <loc>https://global-personal-color.vercel.app/es/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/ja/contact.html</loc>
+    <loc>https://global-personal-color.vercel.app/es/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/es/</loc>
+    <loc>https://global-personal-color.vercel.app/es/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://global-personal-color.vercel.app/zh/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/es/privacy.html</loc>
+    <loc>https://global-personal-color.vercel.app/zh/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/es/terms.html</loc>
+    <loc>https://global-personal-color.vercel.app/zh/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palettetone.com/es/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://palettetone.com/zh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://palettetone.com/zh/privacy.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://palettetone.com/zh/terms.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://palettetone.com/zh/contact.html</loc>
+    <loc>https://global-personal-color.vercel.app/zh/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
