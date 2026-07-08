@@ -46,10 +46,12 @@
         .badge { display: inline-block; padding: 6px 16px; background-color: #6c5ce7; color: white; border-radius: 20px; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }
         #color-palette-display { display: flex; gap: 15px; margin: 20px 0; }
 
-        /* 📸 비디오 박스 및 안면 가이드라인 */
         .camera-wrapper { position: relative; width: 100%; overflow: hidden; border-radius: 12px; margin-top: 15px; background: #000; }
         #webcam { width: 100%; height: auto; display: block; transform: scaleX(-1); }
         .face-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 70%; border: 2px dashed rgba(255,255,255,0.6); border-radius: 50%; box-shadow: 0 0 0 9999px rgba(0,0,0,0.4); pointer-events: none; }
+        
+        .upload-btn-group { display: block !important; margin-top: 15px !important; }
+        .action-btn { width: 100% !important; display: block !important; margin-bottom: 12px !important; text-align: center !important; }
     </style>
 </head>
 <body>
@@ -70,11 +72,11 @@
             <div class="left-column">
                 <section class="card intro-card">
                     <h3>✨ パーソナルカラーガイド</h3>
-                    <p>パーソナルカラーは、あなたの肌、髪、瞳の色에 가장 조화를 이루는 색상 그룹입니다. 자신에게 맞는 톤을 찾으면 얼굴색이 밝아집니다.</p>
+                    <p>パーソナルカラーは、あなたの肌、髪、瞳の色に最も調和する色のグループです。自分に合うトーンを見つけることで、顔色が明るくなります。</p>
                 </section>
                 <section class="card celeb-card">
                     <h3>👑 代表的なセレブ</h3>
-                    <ul><li><span style="color:#ff7675;font-weight:bold;">イエベ春:</span> 本田翼, 石原さとみ</li><li><span style="color:#74b9ff;font-weight:bold;">ブルベ夏:</span> 新垣結衣, 綾瀬はるか</li><li><span style="color:#b2bec3;font-weight:bold;">イエベ秋:</span> 北川景子, 安室奈美恵</li><li><span style="color:#6c5ce7;font-weight:bold;">ブルベ冬:</span> 小松菜奈, 水原希子</li></ul>
+                    <ul><li><span style="color:#ff7675;font-weight:bold;">イエベ春:</span> 本田翼, 石原さとみ</li><li><span style="color:#74b9ff;font-weight:bold;">ブルベ夏:</span> 新垣結衣, 綾瀬はるか</li><li><span style="color:#b2bec3;font-weight:bold;">イエベ秋:</span> 北川景子, 中村アン</li><li><span style="color:#6c5ce7;font-weight:bold;">ブルベ冬:</span> 小松菜奈, 菜々緒</li></ul>
                 </section>
             </div>
             
@@ -82,7 +84,7 @@
                 <section id="quiz-container" class="card quiz-card">
                     <div id="start-view">
                         <h3 style="text-align: center; margin-bottom: 15px;">🎨 あなたのパーソナルカラー診断</h3>
-                        <p style="text-align: center; margin-bottom: 20px;">簡単な視覚的な質問に答えて、あなたに最適な季節のカラーパレットを見つけましょう。</p>
+                        <p style="text-align: center; margin-bottom: 20px;">簡単な視覚的な質問に答えて、あなたにぴったりのシーズンカラーを見つけてみましょう。</p>
                         <button id="start-btn" class="btn">診断を始める</button>
                     </div>
                     
@@ -107,10 +109,16 @@
                     </div>
                 </section>
                 
-                <section class="card upload-card">
-                    <h3>📸 AIカメラ分析 (Beta)</h3>
-                    <p style="margin-bottom: 15px;">正確な分析のため、明るい場所でカメラをまっすぐ見てください。データは保存されません。</p>
-                    <button id="init-cam-btn" class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;">カメラを起動する</button>
+                <section id="analysis-card-zone" class="card upload-card">
+                    <h3>📸 AIスマート分析 (Beta)</h3>
+                    <p style="margin-bottom: 15px;">正確な分析のため、明るい場所で撮影された正面の写真を使用してください。データは保存されません。</p>
+                    
+                    <div class="upload-btn-group">
+                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">カメラを起動する</button>
+                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 写真をアップロード</button>
+                    </div>
+                    
+                    <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
                     
                     <div id="camera-zone" class="hidden">
                         <div class="camera-wrapper">
@@ -130,7 +138,7 @@
     </div>
     <script>
         document.getElementById('lang-ja').classList.add('active');
-        const camErrorMsg = "カメラを起動できません。権限を確認してください。";
+        const camErrorMsg = "カメラを起動できません。権限を確認するか、写真をアップロードしてください。";
     </script>
     <script src="script.js"></script>
 </body>

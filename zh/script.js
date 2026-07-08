@@ -17,7 +17,7 @@ const questions = [
         question: "3. 您通常给人留下的第一印象是什么？",
         answers: [
             { text: "平静、柔和、温暖或亲切的形象。", score: { warm: 1, cool: 0 } },
-            { text: "清晰、干净、精致或干练的形象。", score: { warm: 0, cool: 1 } }
+            { text: "清晰、干净、精致 or 干练的形象。", score: { warm: 0, cool: 1 } }
         ]
     },
     {
@@ -30,7 +30,7 @@ const questions = [
 ];
 
 const results = {
-    spring: { title: "Spring Warm", desc: "您拥有充满活力的温暖能量（春季暖色）！桃色和珊瑚色是您的最佳颜色。", colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF"] },
+    spring: { title: "Spring Warm", desc: "您拥有充满活力的温暖能量（春季暖色）！桃色 and 珊瑚色是您的最佳颜色。", colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF"] },
     summer: { title: "Summer Cool", desc: "您散发着清爽优雅的气息（夏季冷色）！薰衣草色和天蓝色非常适合您。", colors: ["#E8A0BF", "#B9F3FC", "#A7BBC7", "#E1E5EA"] },
     autumn: { title: "Autumn Warm", desc: "您展现出深邃丰富的氛围（秋季暖色）！卡其色、深酒红等大地色能最大化您的魅力。", colors: ["#826F66", "#B85C38", "#5C3D2E", "#E0C097"] },
     winter: { title: "Winter Cool", desc: "您具有现代、干练的魅力（冬季冷色）！纯黑、纯白以及深海军蓝让您的五官更加立体。", colors: ["#000000", "#FFFFFF", "#1A1A40", "#7A0BC0"] }
@@ -47,13 +47,15 @@ const questionText = document.getElementById('question-text');
 const answerButtons = document.getElementById('answer-buttons');
 const progressBar = document.getElementById('progress');
 
-// 📸 카메라 제어 DOM 요소들
 const initCamBtn = document.getElementById('init-cam-btn');
 const cameraZone = document.getElementById('camera-zone');
 const cameraLoading = document.getElementById('camera-loading');
 const webcam = document.getElementById('webcam');
 const captureBtn = document.getElementById('capture-btn');
 const calcCanvas = document.getElementById('calc-canvas');
+
+const triggerFileBtn = document.getElementById('trigger-file-btn');
+const imageFileInput = document.getElementById('image-file-input');
 
 document.getElementById('start-btn').addEventListener('click', startQuiz);
 document.getElementById('restart-btn').addEventListener('click', startQuiz);
@@ -137,11 +139,9 @@ function showResult(forcedTone = null) {
         paletteZone.appendChild(circle);
     });
     
-    // 결과창으로 스크롤 부드럽게 이동
     document.getElementById('quiz-container').scrollIntoView({ behavior: 'smooth' });
 }
 
-// 📸 카메라 제어 핵심 로직 파트
 initCamBtn.addEventListener('click', async () => {
     try {
         localStream = await navigator.mediaDevices.getUserMedia({
@@ -150,6 +150,7 @@ initCamBtn.addEventListener('click', async () => {
         });
         webcam.srcObject = localStream;
         initCamBtn.classList.add('hidden');
+        triggerFileBtn.classList.add('hidden');
         cameraZone.classList.remove('hidden');
     } catch (err) {
         alert(camErrorMsg);
@@ -163,21 +164,57 @@ captureBtn.addEventListener('click', () => {
     cameraZone.classList.add('hidden');
     cameraLoading.classList.remove('hidden');
     
-    // 🔍 픽셀 정밀 진단 시스템 가동 (Canvas 스냅샷)
     const ctx = calcCanvas.getContext('2d');
     calcCanvas.width = webcam.videoWidth || 640;
     calcCanvas.height = webcam.videoHeight || 480;
     
-    // 좌우반전 상태 보정 후 캔버스 드로잉
     ctx.translate(calcCanvas.width, 0);
     ctx.scale(-1, 1);
     ctx.drawImage(webcam, 0, 0, calcCanvas.width, calcCanvas.height);
     
-    // 화면 중앙 영역(얼굴이 위치하는 곳) 픽셀 추출
-    const sampleWidth = 80;
-    const sampleHeight = 80;
-    const sampleX = Math.floor(calcCanvas.width / 2) - 40;
-    const sampleY = Math.floor(calcCanvas.height / 2) - 40;
+    analyzeCanvasPixels(ctx, calcCanvas.width, calcCanvas.height);
+});
+
+triggerFileBtn.addEventListener('click', () => {
+    imageFileInput.click();
+});
+
+imageFileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    stopCamera();
+    initCamBtn.classList.add('hidden');
+    triggerFileBtn.classList.add('hidden');
+    cameraLoading.classList.remove('hidden');
+
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+    img.onload = () => {
+        const ctx = calcCanvas.getContext('2d');
+        const maxDim = 640;
+        let w = img.width;
+        let h = img.height;
+        if (w > maxDim || h > maxDim) {
+            if (w > h) { h = (maxDim / w) * h; w = maxDim; }
+            else { w = (maxDim / h) * w; h = maxDim; }
+        }
+        
+        calcCanvas.width = w;
+        calcCanvas.height = h;
+        ctx.drawImage(img, 0, 0, w, h);
+        
+        analyzeCanvasPixels(ctx, w, h);
+        URL.revokeObjectURL(img.src);
+        imageFileInput.value = "";
+    };
+});
+
+function analyzeCanvasPixels(ctx, width, height) {
+    const sampleWidth = Math.min(80, width);
+    const sampleHeight = Math.min(80, height);
+    const sampleX = Math.floor(width / 2) - Math.floor(sampleWidth / 2);
+    const sampleY = Math.floor(height / 2) - Math.floor(sampleHeight / 2);
     
     const imgData = ctx.getImageData(sampleX, sampleY, sampleWidth, sampleHeight);
     const data = imgData.data;
@@ -194,26 +231,22 @@ captureBtn.addEventListener('click', () => {
     const avgG = gSum / totalPixels;
     const avgB = bSum / totalPixels;
     
-    // 🎨 수식 알고리즘: 노란기(G)와 붉은기(R) 대비 푸른기(B) 비중을 대조하여 언더톤 분석
     const warmValue = (avgR * 0.5 + avgG * 0.5) - avgB;
-    let cameraResultTone = "spring";
+    let computedTone = "spring";
     
     if (warmValue > 35) {
-        // 웜톤 판정: 밝기(R 비율) 기준 세부 분류
-        cameraResultTone = avgR > 180 ? "spring" : "autumn";
+        computedTone = avgR > 180 ? "spring" : "autumn";
     } else {
-        // 쿨톤 판정: 명도 및 채도 대비 분류
-        cameraResultTone = (avgR + avgG + avgB) / 3 > 150 ? "summer" : "winter";
+        computedTone = (avgR + avgG + avgB) / 3 > 150 ? "summer" : "winter";
     }
     
-    // 🧠 1.5초간 가상의 딥러닝 연산 시뮬레이션 후 결과 노출
     setTimeout(() => {
         cameraLoading.classList.add('hidden');
         initCamBtn.classList.remove('hidden');
-        stopCamera();
-        showResult(cameraResultTone);
-    }, 1500);
-});
+        triggerFileBtn.classList.remove('hidden');
+        showResult(computedTone);
+    }, 1300);
+}
 
 function stopCamera() {
     if (localStream) {
@@ -224,4 +257,5 @@ function stopCamera() {
     cameraZone.classList.add('hidden');
     cameraLoading.classList.add('hidden');
     initCamBtn.classList.remove('hidden');
+    triggerFileBtn.classList.remove('hidden');
 }

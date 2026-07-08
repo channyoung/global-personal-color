@@ -46,10 +46,12 @@
         .badge { display: inline-block; padding: 6px 16px; background-color: #6c5ce7; color: white; border-radius: 20px; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }
         #color-palette-display { display: flex; gap: 15px; margin: 20px 0; }
 
-        /* 📸 비디오 박스 및 안면 가이드라인 */
         .camera-wrapper { position: relative; width: 100%; overflow: hidden; border-radius: 12px; margin-top: 15px; background: #000; }
         #webcam { width: 100%; height: auto; display: block; transform: scaleX(-1); }
         .face-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 70%; border: 2px dashed rgba(255,255,255,0.6); border-radius: 50%; box-shadow: 0 0 0 9999px rgba(0,0,0,0.4); pointer-events: none; }
+        
+        .upload-btn-group { display: block !important; margin-top: 15px !important; }
+        .action-btn { width: 100% !important; display: block !important; margin-bottom: 12px !important; text-align: center !important; }
     </style>
 </head>
 <body>
@@ -107,10 +109,16 @@
                     </div>
                 </section>
                 
-                <section class="card upload-card">
-                    <h3>📸 AI Camera Analysis (Beta)</h3>
-                    <p style="margin-bottom: 15px;">Please face the camera in a brightly lit environment. No video data leaves your local device.</p>
-                    <button id="init-cam-btn" class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;">Activate Live Camera</button>
+                <section id="analysis-card-zone" class="card upload-card">
+                    <h3>📸 AI Smart Analysis (Beta)</h3>
+                    <p style="margin-bottom: 15px;">Please use a well-lit front-facing photo for accurate analysis. No data leaves your device.</p>
+                    
+                    <div class="upload-btn-group">
+                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">Activate Live Camera</button>
+                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 Upload Local Photo</button>
+                    </div>
+                    
+                    <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
                     
                     <div id="camera-zone" class="hidden">
                         <div class="camera-wrapper">
@@ -130,7 +138,7 @@
     </div>
     <script>
         document.getElementById('lang-en').classList.add('active');
-        const camErrorMsg = "Cannot access camera. Please check permissions.";
+        const camErrorMsg = "Cannot access camera. Please check browser permissions or upload an image file instead.";
     </script>
     <script src="script.js"></script>
 </body>

@@ -46,10 +46,12 @@
         .badge { display: inline-block; padding: 6px 16px; background-color: #6c5ce7; color: white; border-radius: 20px; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }
         #color-palette-display { display: flex; gap: 15px; margin: 20px 0; }
 
-        /* 📸 비디오 박스 및 안면 가이드라인 */
         .camera-wrapper { position: relative; width: 100%; overflow: hidden; border-radius: 12px; margin-top: 15px; background: #000; }
         #webcam { width: 100%; height: auto; display: block; transform: scaleX(-1); }
         .face-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 70%; border: 2px dashed rgba(255,255,255,0.6); border-radius: 50%; box-shadow: 0 0 0 9999px rgba(0,0,0,0.4); pointer-events: none; }
+        
+        .upload-btn-group { display: block !important; margin-top: 15px !important; }
+        .action-btn { width: 100% !important; display: block !important; margin-bottom: 12px !important; text-align: center !important; }
     </style>
 </head>
 <body>
@@ -107,10 +109,16 @@
                     </div>
                 </section>
                 
-                <section class="card upload-card">
-                    <h3>📸 AI 相机分析 (Beta)</h3>
-                    <p style="margin-bottom: 15px;">请在光线充足的环境下面对相机。数据不会离开您的设备。</p>
-                    <button id="init-cam-btn" class="btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3); margin-top:0;">启动相机</button>
+                <section id="analysis-card-zone" class="card upload-card">
+                    <h3>📸 AI 智能分析 (Beta)</h3>
+                    <p style="margin-bottom: 15px;">请使用光线充足的正脸照片以确保分析准确。数据不会离开您的设备。</p>
+                    
+                    <div class="upload-btn-group">
+                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">启动相机拍照</button>
+                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 上传本地照片</button>
+                    </div>
+                    
+                    <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
                     
                     <div id="camera-zone" class="hidden">
                         <div class="camera-wrapper">
@@ -130,7 +138,7 @@
     </div>
     <script>
         document.getElementById('lang-zh').classList.add('active');
-        const camErrorMsg = "无法访问相机，请检查权限设置。";
+        const camErrorMsg = "无法访问相机，请检查权限，或直接上传本地照片。";
     </script>
     <script src="script.js"></script>
 </body>
