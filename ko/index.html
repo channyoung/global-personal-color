@@ -3,143 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Your Personal Color</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23ff7675'/><stop offset='33%' stop-color='%2374b9ff'/><stop offset='66%' stop-color='%23a29bfe'/><stop offset='100%' stop-color='%23ffeaa7'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23g)'/></svg>">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: #f5f6fa; color: #2d3436; padding: 40px 0; }
-        .container { max-width: 1200px; width: 92%; margin: 0 auto; position: relative; }
-        
-        .lang-switcher { position: absolute; top: -15px; right: 0; display: flex; gap: 8px; z-index: 1000; }
-        .lang-link { text-decoration: none; background: #ffffff; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: #2d3436; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: all 0.2s; border: 1px solid #e4e7eb; }
-        .lang-link:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: #6c5ce7; }
-        .lang-link.active { background: #6c5ce7; color: #ffffff; border-color: #6c5ce7; }
-        
-        header { text-align: center; margin-bottom: 40px; margin-top: 25px; }
-        header h1 { font-size: 2.4rem; font-weight: 800; background: linear-gradient(135deg, #6c5ce7, #74b9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        .main-layout-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 35px; align-items: start; }
-        @media (max-width: 950px) { .main-layout-grid { grid-template-columns: 1fr; gap: 25px; } .lang-switcher { top: -25px; right: 50%; transform: translateX(50%); } header { margin-top: 20px; } }
-        
-        .card { background: #ffffff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-bottom: 25px; border-left: 5px solid #eee; text-align: left; }
-        .intro-card { border-left-color: #a29bfe; }
-        .celeb-card { border-left-color: #ffeaa7; }
-        .quiz-card { border-left-color: #6c5ce7; }
-        .upload-card { border-left-color: #74b9ff; }
-        
-        h3 { font-size: 1.3rem; margin-bottom: 12px; color: #2d3436; font-weight: 700; }
-        p { line-height: 1.7; color: #636e72; font-size: 0.95rem; text-align: justify; }
-        ul { list-style: none; }
-        ul li { margin-bottom: 10px; font-size: 0.95rem; }
-        
-        .hidden { display: none !important; }
-        .btn { display: block; width: 100%; padding: 15px; background: linear-gradient(135deg, #6c5ce7, #a29bfe); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.2s; text-align: center; margin-top: 15px; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(108, 92, 231, 0.25); }
-        
-        .progress-container { background-color: #eee; border-radius: 10px; height: 8px; width: 100%; margin-bottom: 25px; overflow: hidden; }
-        #progress { background: linear-gradient(135deg, #6c5ce7, #74b9ff); height: 100%; width: 0%; transition: width 0.3s ease; }
-        
-        #answer-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
-        #answer-buttons .btn { background: #f8f9fa; color: #2d3436; text-align: left; padding: 16px; border: 1px solid #e4e7eb; margin-top: 0; font-weight: 500; }
-        #answer-buttons .btn:hover { background: #e4e7eb; transform: none; box-shadow: none; }
-        
-        .badge { display: inline-block; padding: 6px 16px; background-color: #6c5ce7; color: white; border-radius: 20px; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }
-        #color-palette-display { display: flex; gap: 15px; margin: 20px 0; }
-
-        .camera-wrapper { position: relative; width: 100%; overflow: hidden; border-radius: 12px; margin-top: 15px; background: #000; }
-        #webcam { width: 100%; height: auto; display: block; transform: scaleX(-1); }
-        .face-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 70%; border: 2px dashed rgba(255,255,255,0.6); border-radius: 50%; box-shadow: 0 0 0 9999px rgba(0,0,0,0.4); pointer-events: none; }
-        
-        .upload-btn-group { display: block !important; margin-top: 15px !important; }
-        .action-btn { width: 100% !important; display: block !important; margin-bottom: 12px !important; text-align: center !important; }
-    </style>
+    <title>온라인 퍼스널 컬러 진단 테스트 | 나에게 맞는 계절톤 찾기</title>
+    <meta name="description" content="무료 온라인 퍼스널 컬러 테스트. AI 카메라와 시각 퀴즈를 통해 봄, 여름, 가을, 겨울 톤을 찾아보세요. 나에게 가장 잘 어울리는 스타일링 가이드를 제공합니다.">
+    <link rel="canonical" href="https://global-personal-color.vercel.app/ko/">
+    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
+    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
+    <link rel="alternate" hreflang="ko" href="https://global-personal-color.vercel.app/ko/">
+    <link rel="alternate" hreflang="ja" href="https://global-personal-color.vercel.app/ja/">
+    <link rel="alternate" hreflang="es" href="https://global-personal-color.vercel.app/es/">
+    <link rel="alternate" hreflang="zh" href="https://global-personal-color.vercel.app/zh/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="온라인 퍼스널 컬러 진단 테스트 | 나에게 맞는 계절톤 찾기">
+    <meta property="og:description" content="AI 카메라와 시각 퀴즈를 이용한 쉽고 빠른 퍼스널 컬러 진단 테스트">
+    <meta property="og:url" content="https://global-personal-color.vercel.app/ko/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "온라인 퍼스널 컬러 진단 테스트",
+      "url": "https://global-personal-color.vercel.app/ko/",
+      "description": "피부 톤 특징과 AI 카메라를 활용해 사계절 퍼스널 컬러를 분석하는 무료 웹 애플리케이션입니다.",
+      "applicationCategory": "LifestyleApplication"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "퍼스널 컬러 진단이란 무엇인가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "타고난 피부색, 눈동자 색, 머리카락 색과 가장 자연스럽게 조화를 이루는 최적의 색상 팔레트를 찾는 방법입니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "AI 카메라 분석은 어떻게 작동하나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "화면 속 얼굴의 평균 RGB 픽셀 데이터를 분석하여 어울리는 계절별 컬러 스펙트럼과 매칭합니다." }
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="container">
         <div class="lang-switcher">
-            <a href="/ko/" id="lang-ko" class="lang-link">🇰🇷 KO</a>
+            <a href="/ko/" id="lang-ko" class="lang-link active">🇰🇷 KO</a>
             <a href="/en/" id="lang-en" class="lang-link">🇺🇸 EN</a>
             <a href="/ja/" id="lang-ja" class="lang-link">🇯🇵 JA</a>
             <a href="/zh/" id="lang-zh" class="lang-link">🇨🇳 ZH</a>
             <a href="/es/" id="lang-es" class="lang-link">🇪🇸 ES</a>
         </div>
-
-        <header>
-            <h1>Find Your Personal Color</h1>
-        </header>
-        
+        <header><h1>Find Your Personal Color</h1></header>
         <div class="main-layout-grid">
             <div class="left-column">
                 <section class="card intro-card">
-                    <h3>✨ 퍼스널 컬러(Personal Color) 가이드</h3>
-                    <p>퍼스널 컬러는 개인이 가진 고유의 신체 색상과 가장 조화를 이루는 핵심 컬러 컬렉션입니다. 맞는 톤을 찾으면 안색이 맑아 보이지만, 맞지 않는 톤은 피부가 칙칙해 보일 수 있습니다.</p>
+                    <h3>✨ 퍼스널 컬러 가이드</h3>
+                    <p>퍼스널 컬러는 타고난 피부 언더톤, 눈동자, 머리카락 색과 가장 잘 어울리는 맞춤형 팔레트입니다. 당신의 톤을 발견하면 본연의 생기와 광채가 살아납니다.</p>
                 </section>
                 <section class="card celeb-card">
-                    <h3>👑 대표 셀럽 리스트</h3>
-                    <ul><li><span style="color:#ff7675;font-weight:bold;">봄 웜톤:</span> 아이유, 수지</li><li><span style="color:#74b9ff;font-weight:bold;">여름 쿨톤:</span> 손예진, 태연</li><li><span style="color:#b2bec3;font-weight:bold;">가을 웜톤:</span> 제니, 효리</li><li><span style="color:#6c5ce7;font-weight:bold;">겨울 쿨톤:</span> 카리나, 선미</li></ul>
+                    <h3>👑 계절별 대표 연예인</h3>
+                    <ul><li><span style="color:#ff7675;font-weight:bold;">봄 웜톤:</span> 아이유, 수지</li><li><span style="color:#74b9ff;font-weight:bold;">여름 쿨톤:</span> 손예진, 태연</li><li><span style="color:#b2bec3;font-weight:bold;">가을 웜톤:</span> 제니, 이효리</li><li><span style="color:#6c5ce7;font-weight:bold;">겨울 쿨톤:</span> 김혜수, 카리나</li></ul>
+                </section>
+                <section class="card seo-text-section">
+                    <h2>퍼스널 컬러로 나만의 아름다움 극대화하기</h2>
+                    <p>모든 사람은 고유한 피부 톤과 분위기를 가지고 태어납니다. 퍼스널 컬러 진단은 이러한 특징을 봄, 여름, 가을, 겨울의 네 가지 계절로 분류합니다. 나에게 딱 맞는 색상 팔레트를 이해하면 쇼핑 실패를 줄이고 메이크업과 스타일링 선택을 극적으로 향상시킬 수 있습니다.</p>
                 </section>
             </div>
-            
             <div class="right-column">
                 <section id="quiz-container" class="card quiz-card">
                     <div id="start-view">
-                        <h3 style="text-align: center; margin-bottom: 15px;">🎨 나만의 퍼스널 컬러 진단</h3>
-                        <p style="text-align: center; margin-bottom: 20px;">간단한 시각적 질문을 통해 사계절 퍼스널 컬러를 즉시 찾아보세요.</p>
-                        <button id="start-btn" class="btn">퍼스널 컬러 테스트 시작하기</button>
+                        <h3 style="text-align: center; margin-bottom: 15px;">🎨 퍼스널 컬러 진단 테스트</h3>
+                        <p style="text-align: center; margin-bottom: 20px;">몇 가지 간단한 시각적 질문을 통해 당신에게 가장 잘 어울리는 사계절 팔레트를 찾아보세요.</p>
+                        <button id="start-btn" class="btn">진단 시작하기</button>
                     </div>
-                    
                     <div id="question-view" class="hidden">
-                        <div class="progress-container">
-                            <div id="progress"></div>
-                        </div>
-                        <h3 id="question-text">Question Loading...</h3>
+                        <div class="progress-container"><div id="progress"></div></div>
+                        <h3 id="question-text">질문 불러오는 중...</h3>
                         <div id="answer-buttons"></div>
                     </div>
-                    
                     <div id="result-view" class="hidden">
-                        <h3 style="margin-bottom: 5px;">🎉 당신의 퍼스널 컬러 진단 결과</h3>
+                        <h3 style="margin-bottom: 5px;">🎉 퍼스널 컬러 진단 결과</h3>
                         <div id="result-tags"></div>
                         <p id="result-description" style="margin-bottom: 25px;"></p>
-                        
                         <h4 id="best-color-title" style="font-weight: 700; margin-bottom: 12px; color:#2d3436;"></h4>
                         <div id="color-palette-display"></div>
-                        
                         <h4 id="match-guide-title" style="font-weight: 700; margin-top: 25px; margin-bottom: 12px; color:#2d3436;"></h4>
                         <button id="restart-btn" class="btn" style="background: #2d3436;">다시 테스트하기</button>
                     </div>
                 </section>
-                
                 <section id="analysis-card-zone" class="card upload-card">
-                    <h3>📸 AI 스마트 분석 및 진단 (Beta)</h3>
-                    <p style="margin-bottom: 15px;">정확한 분석을 위해 얼굴이 정면으로 잘 나온 밝은 사진을 사용해 주세요. 데이터는 외부 서버에 절대 저장되지 않습니다.</p>
-                    
+                    <h3>📸 AI 스마트 진단 (베타)</h3>
+                    <p style="margin-bottom: 15px;">정확한 분석을 위해 조명이 밝은 정면 사진을 이용해 주세요. 사진 데이터는 외부로 유출되지 않습니다.</p>
                     <div class="upload-btn-group">
-                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">실시간 카메라 작동하기</button>
-                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 기존 사진 업로드하기</button>
+                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">실시간 카메라 활성화</button>
+                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 로컬 사진 업로드</button>
                     </div>
-                    
                     <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
-                    
                     <div id="camera-zone" class="hidden">
                         <div class="camera-wrapper">
                             <video id="webcam" autoplay playsinline muted></video>
                             <div class="face-overlay"></div>
                         </div>
-                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">📸 사진 촬영 및 AI 분석하기</button>
+                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">📸 사진 촬영 및 분석</button>
                     </div>
-
-                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">
-                        ⏳ AI가 실시간 피부 톤 분석 중...
-                    </div>
+                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">⏳ AI 피부 톤 분석 중...</div>
                     <canvas id="calc-canvas" class="hidden"></canvas>
+                </section>
+                <section class="card faq-section">
+                    <h2>자주 묻는 질문 (FAQ)</h2>
+                    <div class="faq-item">
+                        <h3>퍼스널 컬러 진단이란 무엇인가요?</h3>
+                        <p>타고난 신체 색상과 최상의 조화를 이루어 더 생기 있어 보이게 만드는 퍼스널 색상 군을 찾는 과정입니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>AI 카메라는 어떻게 작동하나요?</h3>
+                        <p>얼굴 피부 영역의 평균 RGB 픽셀 값을 정밀 계산하여 매칭되는 사계절 컬러 스펙트럼을 즉시 도출합니다.</p>
+                    </div>
                 </section>
             </div>
         </div>
+        <footer style="margin-top:40px; text-align:center; padding:20px; font-size:0.85rem;"><p>© 2026 Find Your Personal Color. All rights reserved.</p></footer>
     </div>
-    <script>
-        document.getElementById('lang-ko').classList.add('active');
-        const camErrorMsg = "카메라를 시작할 수 없습니다. 권한을 확인해 주시거나, 대신 [기존 사진 업로드] 기능을 사용해 주세요!";
-    </script>
+    <script>document.getElementById('lang-ko').classList.add('active'); const camErrorMsg = "카메라에 접근할 수 없습니다.";</script>
     <script src="script.js"></script>
 </body>
 </html>
