@@ -6,24 +6,38 @@
     <title>Online Personal Color Test | Find Your Best Seasonal Color</title>
     <meta name="description" content="Free online personal color test. Find your Spring, Summer, Autumn, or Winter tone using our AI camera and visual quiz. Discover your best styling guide.">
     <link rel="canonical" href="https://global-personal-color.vercel.app/en/">
-    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
-    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
     <link rel="alternate" hreflang="ko" href="https://global-personal-color.vercel.app/ko/">
+    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
     <link rel="alternate" hreflang="ja" href="https://global-personal-color.vercel.app/ja/">
     <link rel="alternate" hreflang="es" href="https://global-personal-color.vercel.app/es/">
     <link rel="alternate" hreflang="zh" href="https://global-personal-color.vercel.app/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
+    <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Find Your Personal Color">
     <meta property="og:title" content="Online Personal Color Test | Find Your Seasonal Tone">
     <meta property="og:description" content="Quick and easy personal color analysis using visual quiz and AI smart camera.">
     <meta property="og:url" content="https://global-personal-color.vercel.app/en/">
+    <meta property="og:image" content="https://global-personal-color.vercel.app/images/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online Personal Color Test | Find Your Seasonal Tone">
+    <meta name="twitter:description" content="Quick and easy personal color analysis using visual quiz and AI smart camera.">
+    <meta name="twitter:image" content="https://global-personal-color.vercel.app/images/og-image.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Online Personal Color Test",
+      "name": "Find Your Personal Color",
       "url": "https://global-personal-color.vercel.app/en/",
-      "description": "Free web application to analyze seasonal personal color using skin tone features and AI camera.",
-      "applicationCategory": "LifestyleApplication"
+      "description": "Free online personal color test. Find your Spring, Summer, Autumn, or Winter tone using our AI camera and visual quiz. Discover your best styling guide.",
+      "applicationCategory": "LifestyleApplication",
+      "inLanguage": "en",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
     <script type="application/ld+json">
@@ -34,12 +48,12 @@
         {
           "@type": "Question",
           "name": "What is a personal color analysis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It is a method of finding the best color palette that harmonizes with your natural skin, eye, and hair color." }
+          "acceptedAnswer": { "@type": "Answer", "text": "It's the process of finding the optimal colors that harmonize with your natural skin tone." }
         },
         {
           "@type": "Question",
-          "name": "How does the AI camera analysis work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It analyzes the average RGB pixel data of your face on screen to match it with seasonal color spectrums." }
+          "name": "How does the AI camera work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It calculates the RGB values of your facial pixels to suggest a matching seasonal palette instantly." }
         }
       ]
     }
@@ -124,9 +138,17 @@
                 </section>
             </div>
         </div>
-        <footer style="margin-top:40px; text-align:center; padding:20px; font-size:0.85rem;"><p>© 2026 Find Your Personal Color. All rights reserved.</p></footer>
+        <footer style="margin-top:40px; text-align:center; padding:20px; font-size:0.85rem;">
+            <p>
+                <a href="/en/about.html">About</a> |
+                <a href="/en/privacy.html">Privacy Policy</a> |
+                <a href="/en/terms.html">Terms of Service</a> |
+                <a href="/en/contact.html">Contact</a>
+            </p>
+            <p style="margin-top:8px;">© 2026 Find Your Personal Color. All rights reserved.</p>
+        </footer>
     </div>
-    <script>document.getElementById('lang-en').classList.add('active'); const camErrorMsg = "Camera access error.";</script>
+    <script>document.getElementById('lang-en').classList.add('active'); const camErrorMsg = "Camera access error. Please check your permissions, or use the [Upload Local Photo] option instead.";</script>
     <script src="script.js"></script>
 </body>
 </html>

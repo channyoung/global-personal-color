@@ -1,39 +1,39 @@
 const questions = [
     {
-        question: "1. 金色和银色饰品，哪个更适合您？",
+        question: "1. 金色和银色饰品，哪一种更衬你的肤色？",
         answers: [
-            { text: "金色让我的皮肤看起来明亮温暖。", score: { warm: 2, cool: 0 } },
-            { text: "银色让我的皮肤看起来干净通透。", score: { warm: 0, cool: 2 } }
+            { text: "佩戴金色饰品时，肤色显得更加红润有光泽。", score: { warm: 2, cool: 0 } },
+            { text: "佩戴银色饰品时，肤色显得更加通透干净。", score: { warm: 0, cool: 2 } }
         ]
     },
     {
-        question: "2. 长时间日晒后您的皮肤反应如何？",
+        question: "2. 长时间日晒后，你的皮肤通常会有什么反应？",
         answers: [
-            { text: "很容易晒黑。", score: { warm: 1, cool: 0 } },
-            { text: "很容易发红或晒伤。", score: { warm: 0, cool: 1 } }
+            { text: "不容易发红，但容易晒黑。", score: { warm: 1, cool: 0 } },
+            { text: "容易晒红，甚至晒伤。", score: { warm: 0, cool: 1 } }
         ]
     },
     {
-        question: "3. 您通常给人留下的第一印象是什么？",
+        question: "3. 身边的人常说你给人的第一印象是？",
         answers: [
-            { text: "平静、柔和、温暖或亲切的形象。", score: { warm: 1, cool: 0 } },
-            { text: "清晰、干净、精致 or 干练的形象。", score: { warm: 0, cool: 1 } }
+            { text: "沉稳柔和，给人温暖亲切的感觉。", score: { warm: 1, cool: 0 } },
+            { text: "清爽利落，给人干练精致的感觉。", score: { warm: 0, cool: 1 } }
         ]
     },
     {
-        question: "4. 您的自然发色或瞳孔颜色更接近哪种？",
+        question: "4. 你天生的发色或瞳色更接近以下哪一种？",
         answers: [
-            { text: "柔和的棕色或浅暖棕色。", score: { warm: 1, cool: 0 } },
-            { text: "纯黑色或非常深的炭黑色。", score: { warm: 0, cool: 1 } }
+            { text: "柔和的棕色或偏亮的浅棕色。", score: { warm: 1, cool: 0 } },
+            { text: "纯正的黑色或非常深的黑棕色。", score: { warm: 0, cool: 1 } }
         ]
     }
 ];
 
 const results = {
-    spring: { title: "Spring Warm", desc: "您拥有充满活力的温暖能量（春季暖色）！桃色 and 珊瑚色是您的最佳颜色。", colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF"] },
-    summer: { title: "Summer Cool", desc: "您散发着清爽优雅的气息（夏季冷色）！薰衣草色和天蓝色非常适合您。", colors: ["#E8A0BF", "#B9F3FC", "#A7BBC7", "#E1E5EA"] },
-    autumn: { title: "Autumn Warm", desc: "您展现出深邃丰富的氛围（秋季暖色）！卡其色、深酒红等大地色能最大化您的魅力。", colors: ["#826F66", "#B85C38", "#5C3D2E", "#E0C097"] },
-    winter: { title: "Winter Cool", desc: "您具有现代、干练的魅力（冬季冷色）！纯黑、纯白以及深海军蓝让您的五官更加立体。", colors: ["#000000", "#FFFFFF", "#1A1A40", "#7A0BC0"] }
+    spring: { title: "Spring Warm", desc: "你拥有活力四射、温暖明媚的春季暖色气质！蜜桃色、珊瑚色和蜂蜜驼色最能衬托你的魅力。", colors: ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF"] },
+    summer: { title: "Summer Cool", desc: "你拥有清透、优雅、气质出众的夏季冷色魅力！薰衣草紫和天空蓝与你绝配。", colors: ["#E8A0BF", "#B9F3FC", "#A7BBC7", "#E1E5EA"] },
+    autumn: { title: "Autumn Warm", desc: "你拥有深邃、丰盈、高级质感的秋季暖色气场！卡其色和酒红色系能将你的魅力发挥到极致。", colors: ["#826F66", "#B85C38", "#5C3D2E", "#E0C097"] },
+    winter: { title: "Winter Cool", desc: "你拥有摩登、鲜明、极具个人魅力的冬季冷色气质！纯黑、纯白与藏青色能让你的五官更加立体出众。", colors: ["#000000", "#FFFFFF", "#1A1A40", "#7A0BC0"] }
 };
 
 let currentQuestionIndex = 0;
@@ -119,12 +119,12 @@ function showResult(forcedTone = null) {
             finalTone = userScores.cool > 3 ? "winter" : "summer";
         }
     }
-    
+
     const resultData = results[finalTone];
     document.getElementById('result-tags').innerHTML = `<span class="badge">${resultData.title}</span>`;
-    
-    document.getElementById('best-color-title').innerText = "最适合您的调色板";
-    document.getElementById('match-guide-title').innerText = "造型与搭配指南";
+
+    document.getElementById('best-color-title').innerText = "为你推荐的最佳色彩搭配";
+    document.getElementById('match-guide-title').innerText = "推荐穿搭与配色指南";
     document.getElementById('result-description').innerText = resultData.desc;
 
     const paletteZone = document.getElementById('color-palette-display');
@@ -138,7 +138,7 @@ function showResult(forcedTone = null) {
         circle.style.boxShadow = "0 3px 6px rgba(0,0,0,0.1)";
         paletteZone.appendChild(circle);
     });
-    
+
     document.getElementById('quiz-container').scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -160,18 +160,18 @@ initCamBtn.addEventListener('click', async () => {
 
 captureBtn.addEventListener('click', () => {
     if (!localStream) return;
-    
+
     cameraZone.classList.add('hidden');
     cameraLoading.classList.remove('hidden');
-    
+
     const ctx = calcCanvas.getContext('2d');
     calcCanvas.width = webcam.videoWidth || 640;
     calcCanvas.height = webcam.videoHeight || 480;
-    
+
     ctx.translate(calcCanvas.width, 0);
     ctx.scale(-1, 1);
     ctx.drawImage(webcam, 0, 0, calcCanvas.width, calcCanvas.height);
-    
+
     analyzeCanvasPixels(ctx, calcCanvas.width, calcCanvas.height);
 });
 
@@ -199,11 +199,11 @@ imageFileInput.addEventListener('change', (e) => {
             if (w > h) { h = (maxDim / w) * h; w = maxDim; }
             else { w = (maxDim / h) * w; h = maxDim; }
         }
-        
+
         calcCanvas.width = w;
         calcCanvas.height = h;
         ctx.drawImage(img, 0, 0, w, h);
-        
+
         analyzeCanvasPixels(ctx, w, h);
         URL.revokeObjectURL(img.src);
         imageFileInput.value = "";
@@ -215,10 +215,10 @@ function analyzeCanvasPixels(ctx, width, height) {
     const sampleHeight = Math.min(80, height);
     const sampleX = Math.floor(width / 2) - Math.floor(sampleWidth / 2);
     const sampleY = Math.floor(height / 2) - Math.floor(sampleHeight / 2);
-    
+
     const imgData = ctx.getImageData(sampleX, sampleY, sampleWidth, sampleHeight);
     const data = imgData.data;
-    
+
     let rSum = 0, gSum = 0, bSum = 0, totalPixels = 0;
     for (let i = 0; i < data.length; i += 4) {
         rSum += data[i];
@@ -226,20 +226,20 @@ function analyzeCanvasPixels(ctx, width, height) {
         bSum += data[i+2];
         totalPixels++;
     }
-    
+
     const avgR = rSum / totalPixels;
     const avgG = gSum / totalPixels;
     const avgB = bSum / totalPixels;
-    
+
     const warmValue = (avgR * 0.5 + avgG * 0.5) - avgB;
     let computedTone = "spring";
-    
+
     if (warmValue > 35) {
         computedTone = avgR > 180 ? "spring" : "autumn";
     } else {
         computedTone = (avgR + avgG + avgB) / 3 > 150 ? "summer" : "winter";
     }
-    
+
     setTimeout(() => {
         cameraLoading.classList.add('hidden');
         initCamBtn.classList.remove('hidden');

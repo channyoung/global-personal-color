@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>オンラインパーソナルカラー診断テスト | 自分に合う季節のトーンを見つける</title>
-    <meta name="description" content="無料のオンラインパーソナルカラー診断。AIカメラ and 視覚クイズで、スプリング、サマー、オータム、ウィンターのトーンを見つけます。最適なスタイリングガイドを提供。">
+    <title>パーソナルカラー診断テスト｜自分に似合う色を見つけよう | Find Your Personal Color</title>
+    <meta name="description" content="4つの簡単な質問とAI写真分析で、スプリング・サマー・オータム・ウィンターのどれに当てはまるか無料で診断。あなたに似合うカラーパレットとスタイリングガイドもご紹介します。">
     <link rel="canonical" href="https://global-personal-color.vercel.app/ja/">
-    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
-    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
     <link rel="alternate" hreflang="ko" href="https://global-personal-color.vercel.app/ko/">
+    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
     <link rel="alternate" hreflang="ja" href="https://global-personal-color.vercel.app/ja/">
     <link rel="alternate" hreflang="es" href="https://global-personal-color.vercel.app/es/">
     <link rel="alternate" hreflang="zh" href="https://global-personal-color.vercel.app/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Find Your Personal Color">
+    <meta property="og:title" content="パーソナルカラー診断テスト｜自分に似合う色を見つけよう">
+    <meta property="og:description" content="簡単な質問とAIカメラ分析で、あなたのパーソナルカラーを無料で診断します。">
+    <meta property="og:url" content="https://global-personal-color.vercel.app/ja/">
+    <meta property="og:image" content="https://global-personal-color.vercel.app/images/og-image.png">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="パーソナルカラー診断テスト｜自分に似合う色を見つけよう">
+    <meta name="twitter:description" content="簡単な質問とAIカメラ分析で、あなたのパーソナルカラーを無料で診断します。">
+    <meta name="twitter:image" content="https://global-personal-color.vercel.app/images/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Find Your Personal Color",
+      "url": "https://global-personal-color.vercel.app/ja/",
+      "description": "4つの簡単な質問とAI写真分析で、スプリング・サマー・オータム・ウィンターのどれに当てはまるか無料で診断。あなたに似合うカラーパレットとスタイリングガイドもご紹介します。",
+      "applicationCategory": "LifestyleApplication",
+      "inLanguage": "ja",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "パーソナルカラー診断とは何ですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "生まれ持った肌のトーンと調和する最適な色を見つけるプロセスです。" }
+        },
+        {
+          "@type": "Question",
+          "name": "AIカメラ分析はどのように機能しますか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "顔部分のピクセルのRGB値を計算し、瞬時に似合う季節パレットを提案します。" }
+        }
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -27,50 +73,82 @@
         <div class="main-layout-grid">
             <div class="left-column">
                 <section class="card intro-card">
-                    <h3>✨ パーソナルカラーガイド</h3>
-                    <p>パーソナルカラーとは、生まれ持った肌、瞳、髪の色と最も調和する最適なカラーパレットのことです。自分のトーンを知ることで、本来의輝きを引き出すことができます。</p>
+                    <h3>✨ パーソナルカラー(Personal Color)ガイド</h3>
+                    <p>パーソナルカラーとは、生まれ持った肌・瞳・髪の色と最も調和する色のコレクションです。自分に合うトーンを見つけると顔色が明るく見えますが、合わないトーンだと肌がくすんで見えることがあります。</p>
                 </section>
                 <section class="card celeb-card">
-                    <h3>👑 季節別の代表的な芸能人</h3>
-                    <ul><li><span style="color:#ff7675;font-weight:bold;">イエベ春:</span> 石原さとみ, 今田美桜</li><li><span style="color:#74b9ff;font-weight:bold;">ブルベ夏:</span> 綾瀬はるか, 新垣結衣</li><li><span style="color:#b2bec3;font-weight:bold;">イエベ秋:</span> 北川景子, 中村アン</li><li><span style="color:#6c5ce7;font-weight:bold;">ブルベ冬:</span> 小松菜奈, 広瀬すず</li></ul>
+                    <h3>👑 代表的な芸能人リスト</h3>
+                    <ul><li><span style="color:#ff7675;font-weight:bold;">スプリングウォーム:</span> 新垣結衣, 広瀬すず</li><li><span style="color:#74b9ff;font-weight:bold;">サマークール:</span> 石原さとみ, 綾瀬はるか</li><li><span style="color:#b2bec3;font-weight:bold;">オータムウォーム:</span> 米倉涼子, 深田恭子</li><li><span style="color:#6c5ce7;font-weight:bold;">ウィンタークール:</span> 宇多田ヒカル, 中島美嘉</li></ul>
                 </section>
                 <section class="card seo-text-section">
-                    <h2>パーソナルカラーであなたの魅力を最大限に</h2>
-                    <p>人はそれぞれ独自の肌のアンダートーンを持っています。パーソナルカラー診断では、these 特徴を春・夏・秋・冬の4つの季節に分類します。自分に合ったパレットを理解することで、服選びやメイクの失敗を減らし、スタイリングを劇的に向上させることができます。</p>
+                    <h2>パーソナルカラーで魅力を引き出す</h2>
+                    <p>誰もが生まれ持った独自の肌のアンダートーンと瞳の色を持っています。パーソナルカラー診断では、これらの特徴をスプリング・サマー・オータム・ウィンターの4つのシーズンに分類します。自分に合うパレットを知ることで、買い物の失敗を減らし、メイクやスタイリングの精度を大きく高めることができます。</p>
                 </section>
             </div>
             <div class="right-column">
                 <section id="quiz-container" class="card quiz-card">
                     <div id="start-view">
                         <h3 style="text-align: center; margin-bottom: 15px;">🎨 パーソナルカラー診断テスト</h3>
-                        <p style="text-align: center; margin-bottom: 20px;">いくつかの簡単なクイズに答えるだけで、あなたにぴったりの季節のパレットを見つけます。</p>
-                        <button id="start-btn" class="btn">診断を始める</button>
+                        <p style="text-align: center; margin-bottom: 20px;">簡単なビジュアル質問に答えるだけで、あなたの季節タイプをすぐに見つけられます。</p>
+                        <button id="start-btn" class="btn">診断テストを始める</button>
                     </div>
                     <div id="question-view" class="hidden">
                         <div class="progress-container"><div id="progress"></div></div>
-                        <h3 id="question-text">読み込み中...</h3>
+                        <h3 id="question-text">Question Loading...</h3>
                         <div id="answer-buttons"></div>
                     </div>
                     <div id="result-view" class="hidden">
-                        <h3>🎉 診断結果</h3>
+                        <h3 style="margin-bottom: 5px;">🎉 あなたのパーソナルカラー診断結果</h3>
                         <div id="result-tags"></div>
                         <p id="result-description" style="margin-bottom: 25px;"></p>
+                        <h4 id="best-color-title" style="font-weight: 700; margin-bottom: 12px; color:#2d3436;"></h4>
+                        <div id="color-palette-display"></div>
+                        <h4 id="match-guide-title" style="font-weight: 700; margin-top: 25px; margin-bottom: 12px; color:#2d3436;"></h4>
                         <button id="restart-btn" class="btn" style="background: #2d3436;">もう一度テストする</button>
                     </div>
                 </section>
                 <section id="analysis-card-zone" class="card upload-card">
-                    <h3>📸 AIスマート診断 (ベータ)</h3>
-                    <p>明るい場所で正面を向いた写真を使用してください。データは外部に送信されません。</p>
+                    <h3>📸 AIスマート分析 (Beta)</h3>
+                    <p style="margin-bottom: 15px;">正確な分析のため、正面から明るく撮影された写真をご使用ください。データが外部サーバーに保存されることは一切ありません。</p>
                     <div class="upload-btn-group">
-                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">カメラを起動</button>
-                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 写真をアップロード</button>
+                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">リアルタイムカメラを起動する</button>
+                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 写真をアップロードする</button>
                     </div>
                     <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
+                    <div id="camera-zone" class="hidden">
+                        <div class="camera-wrapper">
+                            <video id="webcam" autoplay playsinline muted></video>
+                            <div class="face-overlay"></div>
+                        </div>
+                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">📸 撮影してAI分析する</button>
+                    </div>
+                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">⏳ AIが肌トーンをリアルタイム分析中...</div>
+                    <canvas id="calc-canvas" class="hidden"></canvas>
+                </section>
+                <section class="card faq-section">
+                    <h2>よくある質問 (FAQ)</h2>
+                    <div class="faq-item">
+                        <h3>パーソナルカラー診断とは何ですか？</h3>
+                        <p>生まれ持った肌のトーンと調和する最適な色を見つけるプロセスです。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>AIカメラ分析はどのように機能しますか？</h3>
+                        <p>顔部分のピクセルのRGB値を計算し、瞬時に似合う季節パレットを提案します。</p>
+                    </div>
                 </section>
             </div>
         </div>
+        <footer style="margin-top:40px; text-align:center; padding:20px; font-size:0.85rem;">
+            <p>
+                <a href="/ja/about.html">サービス紹介</a> |
+                <a href="/ja/privacy.html">プライバシーポリシー</a> |
+                <a href="/ja/terms.html">利用規約</a> |
+                <a href="/ja/contact.html">お問い合わせ</a>
+            </p>
+            <p style="margin-top:8px;">© 2026 Find Your Personal Color. All rights reserved.</p>
+        </footer>
     </div>
-    <script>document.getElementById('lang-ja').classList.add('active');</script>
+    <script>document.getElementById('lang-ja').classList.add('active'); const camErrorMsg = "カメラを起動できませんでした。権限をご確認いただくか、代わりに写真アップロード機能をご利用ください。";</script>
     <script src="script.js"></script>
 </body>
 </html>

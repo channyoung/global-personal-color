@@ -6,12 +6,58 @@
     <title>Test de Color Personal Online | Encuentra tu Paleta de Colores Estacionales</title>
     <meta name="description" content="Test de color personal online gratuito. Encuentra tu tono de primavera, verano, otoño o invierno usando nuestra cámara IA y un quiz visual. Descubre tu guía de estilo.">
     <link rel="canonical" href="https://global-personal-color.vercel.app/es/">
-    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
-    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
     <link rel="alternate" hreflang="ko" href="https://global-personal-color.vercel.app/ko/">
+    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
     <link rel="alternate" hreflang="ja" href="https://global-personal-color.vercel.app/ja/">
     <link rel="alternate" hreflang="es" href="https://global-personal-color.vercel.app/es/">
     <link rel="alternate" hreflang="zh" href="https://global-personal-color.vercel.app/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Find Your Personal Color">
+    <meta property="og:title" content="Test de Color Personal | Encuentra tu Paleta Estacional">
+    <meta property="og:description" content="Análisis de color personal rápido y sencillo con quiz visual y cámara inteligente con IA.">
+    <meta property="og:url" content="https://global-personal-color.vercel.app/es/">
+    <meta property="og:image" content="https://global-personal-color.vercel.app/images/og-image.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Test de Color Personal | Encuentra tu Paleta Estacional">
+    <meta name="twitter:description" content="Análisis de color personal rápido y sencillo con quiz visual y cámara inteligente con IA.">
+    <meta name="twitter:image" content="https://global-personal-color.vercel.app/images/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Find Your Personal Color",
+      "url": "https://global-personal-color.vercel.app/es/",
+      "description": "Test de color personal online gratuito. Encuentra tu tono de primavera, verano, otoño o invierno usando nuestra cámara IA y un quiz visual. Descubre tu guía de estilo.",
+      "applicationCategory": "LifestyleApplication",
+      "inLanguage": "es",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es un análisis de color personal?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Es el proceso de encontrar los colores óptimos que armonizan con tu tono de piel natural." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona el análisis con cámara de IA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Calcula los valores RGB de los píxeles de tu rostro para sugerir al instante una paleta estacional acorde." }
+        }
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -30,18 +76,79 @@
                     <h3>✨ Guía de Color Personal</h3>
                     <p>El color personal es la paleta seleccionada que mejor complementa los tonos naturales de tu piel, ojos y cabello.</p>
                 </section>
+                <section class="card celeb-card">
+                    <h3>👑 Celebridades Representativas</h3>
+                    <ul><li><span style="color:#ff7675;font-weight:bold;">Primavera Cálida:</span> Blake Lively, Emma Stone</li><li><span style="color:#74b9ff;font-weight:bold;">Verano Frío:</span> Margot Robbie, Elle Fanning</li><li><span style="color:#b2bec3;font-weight:bold;">Otoño Cálido:</span> Jennifer Lopez, Zendaya</li><li><span style="color:#6c5ce7;font-weight:bold;">Invierno Frío:</span> Anne Hathaway, Dua Lipa</li></ul>
+                </section>
+                <section class="card seo-text-section">
+                    <h2>Resalta tu Belleza con el Color Personal</h2>
+                    <p>Cada persona nace con un tono de piel y de ojos único. El análisis de color personal clasifica estos rasgos en cuatro estaciones: primavera, verano, otoño e invierno. Conocer tu paleta específica reduce los errores al comprar ropa y mejora notablemente tus elecciones de maquillaje y estilismo.</p>
+                </section>
             </div>
             <div class="right-column">
                 <section id="quiz-container" class="card quiz-card">
                     <div id="start-view">
-                        <h3>🎨 Test de Color Personal</h3>
+                        <h3 style="text-align: center; margin-bottom: 15px;">🎨 Test de Color Personal</h3>
+                        <p style="text-align: center; margin-bottom: 20px;">Descubre tu paleta de estación perfecta respondiendo unas sencillas preguntas visuales.</p>
                         <button id="start-btn" class="btn">Iniciar Test</button>
+                    </div>
+                    <div id="question-view" class="hidden">
+                        <div class="progress-container"><div id="progress"></div></div>
+                        <h3 id="question-text">Question Loading...</h3>
+                        <div id="answer-buttons"></div>
+                    </div>
+                    <div id="result-view" class="hidden">
+                        <h3 style="margin-bottom: 5px;">🎉 Tu Resultado de Color Personal</h3>
+                        <div id="result-tags"></div>
+                        <p id="result-description" style="margin-bottom: 25px;"></p>
+                        <h4 id="best-color-title" style="font-weight: 700; margin-bottom: 12px; color:#2d3436;"></h4>
+                        <div id="color-palette-display"></div>
+                        <h4 id="match-guide-title" style="font-weight: 700; margin-top: 25px; margin-bottom: 12px; color:#2d3436;"></h4>
+                        <button id="restart-btn" class="btn" style="background: #2d3436;">Reiniciar Test</button>
+                    </div>
+                </section>
+                <section id="analysis-card-zone" class="card upload-card">
+                    <h3>📸 Análisis Inteligente con IA (Beta)</h3>
+                    <p style="margin-bottom: 15px;">Para un análisis preciso, usa una foto de frente bien iluminada. Ningún dato sale de tu dispositivo.</p>
+                    <div class="upload-btn-group">
+                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">Activar Cámara en Vivo</button>
+                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 Subir una Foto</button>
+                    </div>
+                    <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
+                    <div id="camera-zone" class="hidden">
+                        <div class="camera-wrapper">
+                            <video id="webcam" autoplay playsinline muted></video>
+                            <div class="face-overlay"></div>
+                        </div>
+                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">📸 Tomar Foto y Analizar</button>
+                    </div>
+                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">⏳ La IA está analizando tu tono de piel...</div>
+                    <canvas id="calc-canvas" class="hidden"></canvas>
+                </section>
+                <section class="card faq-section">
+                    <h2>Preguntas Frecuentes (FAQ)</h2>
+                    <div class="faq-item">
+                        <h3>¿Qué es un análisis de color personal?</h3>
+                        <p>Es el proceso de encontrar los colores óptimos que armonizan con tu tono de piel natural.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Cómo funciona el análisis con cámara de IA?</h3>
+                        <p>Calcula los valores RGB de los píxeles de tu rostro para sugerir al instante una paleta estacional acorde.</p>
                     </div>
                 </section>
             </div>
         </div>
+        <footer style="margin-top:40px; text-align:center; padding:20px; font-size:0.85rem;">
+            <p>
+                <a href="/es/about.html">Sobre Nosotros</a> |
+                <a href="/es/privacy.html">Política de Privacidad</a> |
+                <a href="/es/terms.html">Términos de Servicio</a> |
+                <a href="/es/contact.html">Contacto</a>
+            </p>
+            <p style="margin-top:8px;">© 2026 Find Your Personal Color. All rights reserved.</p>
+        </footer>
     </div>
-    <script>document.getElementById('lang-es').classList.add('active');</script>
+    <script>document.getElementById('lang-es').classList.add('active'); const camErrorMsg = "No se pudo acceder a la cámara. Revisa los permisos o usa la opción de subir una foto.";</script>
     <script src="script.js"></script>
 </body>
 </html>

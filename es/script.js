@@ -119,10 +119,10 @@ function showResult(forcedTone = null) {
             finalTone = userScores.cool > 3 ? "winter" : "summer";
         }
     }
-    
+
     const resultData = results[finalTone];
     document.getElementById('result-tags').innerHTML = `<span class="badge">${resultData.title}</span>`;
-    
+
     document.getElementById('best-color-title').innerText = "Tu Mejor Paleta de Colores";
     document.getElementById('match-guide-title').innerText = "Guía de Estilo";
     document.getElementById('result-description').innerText = resultData.desc;
@@ -138,7 +138,7 @@ function showResult(forcedTone = null) {
         circle.style.boxShadow = "0 3px 6px rgba(0,0,0,0.1)";
         paletteZone.appendChild(circle);
     });
-    
+
     document.getElementById('quiz-container').scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -160,18 +160,18 @@ initCamBtn.addEventListener('click', async () => {
 
 captureBtn.addEventListener('click', () => {
     if (!localStream) return;
-    
+
     cameraZone.classList.add('hidden');
     cameraLoading.classList.remove('hidden');
-    
+
     const ctx = calcCanvas.getContext('2d');
     calcCanvas.width = webcam.videoWidth || 640;
     calcCanvas.height = webcam.videoHeight || 480;
-    
+
     ctx.translate(calcCanvas.width, 0);
     ctx.scale(-1, 1);
     ctx.drawImage(webcam, 0, 0, calcCanvas.width, calcCanvas.height);
-    
+
     analyzeCanvasPixels(ctx, calcCanvas.width, calcCanvas.height);
 });
 
@@ -199,11 +199,11 @@ imageFileInput.addEventListener('change', (e) => {
             if (w > h) { h = (maxDim / w) * h; w = maxDim; }
             else { w = (maxDim / h) * w; h = maxDim; }
         }
-        
+
         calcCanvas.width = w;
         calcCanvas.height = h;
         ctx.drawImage(img, 0, 0, w, h);
-        
+
         analyzeCanvasPixels(ctx, w, h);
         URL.revokeObjectURL(img.src);
         imageFileInput.value = "";
@@ -215,10 +215,10 @@ function analyzeCanvasPixels(ctx, width, height) {
     const sampleHeight = Math.min(80, height);
     const sampleX = Math.floor(width / 2) - Math.floor(sampleWidth / 2);
     const sampleY = Math.floor(height / 2) - Math.floor(sampleHeight / 2);
-    
+
     const imgData = ctx.getImageData(sampleX, sampleY, sampleWidth, sampleHeight);
     const data = imgData.data;
-    
+
     let rSum = 0, gSum = 0, bSum = 0, totalPixels = 0;
     for (let i = 0; i < data.length; i += 4) {
         rSum += data[i];
@@ -226,20 +226,20 @@ function analyzeCanvasPixels(ctx, width, height) {
         bSum += data[i+2];
         totalPixels++;
     }
-    
+
     const avgR = rSum / totalPixels;
     const avgG = gSum / totalPixels;
     const avgB = bSum / totalPixels;
-    
+
     const warmValue = (avgR * 0.5 + avgG * 0.5) - avgB;
     let computedTone = "spring";
-    
+
     if (warmValue > 35) {
         computedTone = avgR > 180 ? "spring" : "autumn";
     } else {
         computedTone = (avgR + avgG + avgB) / 3 > 150 ? "summer" : "winter";
     }
-    
+
     setTimeout(() => {
         cameraLoading.classList.add('hidden');
         initCamBtn.classList.remove('hidden');
