@@ -16,43 +16,66 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Find Your Personal Color">
     <meta property="og:title" content="서비스 소개 | Find Your Personal Color">
-    <meta property="og:description" content="Find Your Personal Color는 사용자가 자신의 퍼스널 컬러를 진단하고 스타일링에 대한 통찰을 얻을 수 있도록 돕는 서비스입니다.">
     <meta property="og:url" content="https://global-personal-color.vercel.app/ko/about.html">
-    <meta property="og:image" content="https://global-personal-color.vercel.app/images/og-image.png">
     <meta property="og:locale" content="ko_KR">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:locale:alternate" content="ja_JP">
-    <meta property="og:locale:alternate" content="es_ES">
-    <meta property="og:locale:alternate" content="zh_CN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="서비스 소개 | Find Your Personal Color">
-    <meta name="twitter:description" content="Find Your Personal Color는 사용자가 자신의 퍼스널 컬러를 진단하고 스타일링에 대한 통찰을 얻을 수 있도록 돕는 서비스입니다.">
-    <meta name="twitter:image" content="https://global-personal-color.vercel.app/images/og-image.png">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-    * { box-sizing: border-box; }
-    .container { max-width: 1200px !important; width: 92% !important; margin: 0 auto !important; padding: 0 15px !important; }
-    .main-layout-grid { display: grid !important; grid-template-columns: 1.1fr 0.9fr !important; gap: 40px !important; margin: 30px auto !important; align-items: start !important; }
-    @media (max-width: 950px) { .main-layout-grid { grid-template-columns: 1fr !important; gap: 25px !important; } }
-    .card { width: 100% !important; margin-bottom: 20px !important; padding: 30px !important; border-radius: 14px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important; background: #ffffff !important; }
+        :root{
+            --canvas:#F3EFE6; --card:#FBF9F4; --ink:#2B2420; --ink-soft:#6E6156; --ink-faint:#9A9082;
+            --brand:#6B3F4D; --brand-soft:#EADFE1;
+            --border:rgba(43,36,32,0.12); --border-strong:rgba(43,36,32,0.22);
+        }
+        *{box-sizing:border-box;}
+        body{margin:0;background:var(--canvas);color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;}
+        .serif{font-family:'Fraunces',serif;}
+        .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+        a{color:inherit;}
+        header{padding:26px 0;}
+        .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+        .logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;}
+        .lang-tabs{display:flex;gap:2px;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:3px;}
+        .lang-tabs a{font-size:0.72rem;font-weight:600;letter-spacing:0.03em;padding:6px 12px;border-radius:999px;color:var(--ink-soft);text-decoration:none;}
+        .lang-tabs a.active{background:var(--ink);color:var(--canvas);}
+        main.card-panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px;margin:24px auto 48px;}
+        main.card-panel h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.7rem;margin:0 0 20px;}
+        main.card-panel p{font-size:0.96rem;line-height:1.85;color:var(--ink-soft);margin:0 0 20px;}
+        .btn{display:inline-block;padding:13px 26px;background:var(--ink);color:var(--canvas);border:none;border-radius:10px;font-size:0.92rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .15s ease;text-align:center;text-decoration:none;}
+        .btn:hover{background:var(--brand);transform:translateY(-1px);}
+        footer{padding:0 0 56px;text-align:center;}
+        footer .flinks a{color:var(--ink-soft);text-decoration:none;font-size:0.85rem;margin:0 10px;}
+        footer .flinks a:hover{color:var(--brand);}
+        footer .fcopy{margin-top:14px;font-size:0.78rem;color:var(--ink-faint);}
     </style>
 </head>
 <body>
-    <header>
-        <div class="container"><h1><a href="/ko/">Find Your Personal Color</a></h1></div>
+    <header class="wrap">
+        <div class="nav">
+            <a href="/ko/" class="logo">Find Your Personal Color</a>
+            <div class="lang-tabs">
+                <a href="/ko/" class="active">KO</a>
+                <a href="/en/">EN</a>
+                <a href="/ja/">JA</a>
+                <a href="/es/">ES</a>
+                <a href="/zh/">ZH</a>
+            </div>
+        </div>
     </header>
-    <main class="container card" style="margin-top:20px; padding:40px;">
+    <main class="wrap card-panel">
         <h2>서비스 소개</h2>
-        <p style="line-height:1.8; color:#333;">Find Your Personal Color는 사용자가 자신의 퍼스널 컬러를 진단하고 스타일링에 대한 통찰을 얻을 수 있도록 돕기 위해 제작되었습니다. 데이터 기반 분석을 통해 일상에 작은 즐거움을 선사하는 것이 목표입니다.</p>
-        <a href="/ko/" class="btn" style="margin-top:20px; display:inline-block;">홈으로 돌아가기</a>
+        <p>Find Your Personal Color는 사용자가 자신의 퍼스널 컬러를 진단하고 스타일링에 대한 통찰을 얻을 수 있도록 돕기 위해 제작되었습니다. 데이터 기반 분석을 통해 일상에 작은 즐거움을 선사하는 것이 목표입니다.</p>
+
+        <a href="/ko/" class="btn">홈으로 돌아가기</a>
     </main>
-    <footer style="margin-top:40px; text-align:center; padding:20px;">
-        <p>
-            <a href="/ko/about.html">서비스 소개</a> |
-            <a href="/ko/privacy.html">개인정보처리방침</a> |
-            <a href="/ko/terms.html">이용약관</a> |
+    <footer class="wrap">
+        <div class="flinks">
+            <a href="/ko/about.html">서비스 소개</a>
+            <a href="/ko/privacy.html">개인정보처리방침</a>
+            <a href="/ko/terms.html">이용약관</a>
             <a href="/ko/contact.html">문의하기</a>
-        </p>
+        </div>
+        <div class="fcopy">© 2026 Find Your Personal Color. All rights reserved.</div>
     </footer>
 </body>
 </html>

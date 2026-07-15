@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+set -e
+
+# ==============================================================
+# Google Search Console verification -- adds the meta tag to
+# root index.html only. Run from the repo root.
+# ==============================================================
+
+echo "Adding GSC verification tag to index.html..."
+cat > index.html <<'EOF_GPC'
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Personal Color</title>
+    <meta name="google-site-verification" content="TW7l1P1SIjiAjuRTz8jUIFztgIoJbLwDNrsLHJTykyY" />
+
+    <!-- This page only redirects by browser language and has no indexable content of its own,
+         so it is kept out of the index while still pointing crawlers to the real language pages. -->
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="alternate" hreflang="ko" href="https://global-personal-color.vercel.app/ko/">
+    <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
+    <link rel="alternate" hreflang="ja" href="https://global-personal-color.vercel.app/ja/">
+    <link rel="alternate" hreflang="es" href="https://global-personal-color.vercel.app/es/">
+    <link rel="alternate" hreflang="zh" href="https://global-personal-color.vercel.app/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
+
+    <!-- Fallback for crawlers/browsers that don't run the redirect script -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://global-personal-color.vercel.app/en/">
+    </noscript>
+
+    <script>
+        var lang = navigator.language || navigator.userLanguage;
+        lang = lang.toLowerCase();
+        if (lang.indexOf('ko') !== -1) {
+            window.location.href = '/ko/';
+        } else if (lang.indexOf('ja') !== -1) {
+            window.location.href = '/ja/';
+        } else if (lang.indexOf('es') !== -1) {
+            window.location.href = '/es/';
+        } else if (lang.indexOf('zh') !== -1) {
+            window.location.href = '/zh/';
+        } else {
+            window.location.href = '/en/';
+        }
+    </script>
+
+    <style>
+    /* CSS Injection - Responsive Layout */
+    * { box-sizing: border-box; }
+    .container {
+        max-width: 1200px !important;
+        width: 92% !important;
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+    }
+
+    .main-layout-grid {
+        display: grid !important;
+        grid-template-columns: 1.1fr 0.9fr !important;
+        gap: 40px !important;
+        margin: 30px auto !important;
+        align-items: start !important;
+    }
+
+    @media (max-width: 950px) {
+        .main-layout-grid {
+            grid-template-columns: 1fr !important;
+            gap: 25px !important;
+        }
+    }
+
+    .card {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        padding: 30px !important;
+        border-radius: 14px !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+        background: #ffffff !important;
+    }
+    #quiz-container { margin-top: 0 !important; }
+    </style>
+</head>
+<body>
+    <p>Redirecting based on your browser language&hellip; If it doesn't work, choose a language:
+        <a href="/en/">English</a> ·
+        <a href="/ko/">한국어</a> ·
+        <a href="/ja/">日本語</a> ·
+        <a href="/es/">Español</a> ·
+        <a href="/zh/">中文</a>
+    </p>
+</body>
+</html>
+EOF_GPC
+
+git add index.html
+git commit -m "Add Google Search Console verification meta tag"
+git push
+
+echo "Done. Once Vercel redeploys, go back to Search Console and click Verify."

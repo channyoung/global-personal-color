@@ -6,12 +6,14 @@
     <title>퍼스널 컬러 진단 테스트 - 나에게 맞는 웜톤 쿨톤 찾기 | Find Your Personal Color</title>
     <meta name="description" content="4가지 간단한 질문과 AI 사진 분석으로 봄웜, 여름쿨, 가을웜, 겨울쿨 중 나에게 어울리는 퍼스널 컬러를 무료로 진단해보세요. 어울리는 컬러 팔레트와 스타일링 가이드까지 확인할 수 있습니다.">
     <link rel="canonical" href="https://global-personal-color.vercel.app/ko/">
+
     <link rel="alternate" hreflang="ko" href="https://global-personal-color.vercel.app/ko/">
     <link rel="alternate" hreflang="en" href="https://global-personal-color.vercel.app/en/">
     <link rel="alternate" hreflang="ja" href="https://global-personal-color.vercel.app/ja/">
     <link rel="alternate" hreflang="es" href="https://global-personal-color.vercel.app/es/">
     <link rel="alternate" hreflang="zh" href="https://global-personal-color.vercel.app/zh/">
     <link rel="alternate" hreflang="x-default" href="https://global-personal-color.vercel.app/en/">
+
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Find Your Personal Color">
@@ -24,131 +26,297 @@
     <meta property="og:locale:alternate" content="ja_JP">
     <meta property="og:locale:alternate" content="es_ES">
     <meta property="og:locale:alternate" content="zh_CN">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="퍼스널 컬러 진단 테스트 - 나에게 맞는 웜톤 쿨톤 찾기">
     <meta name="twitter:description" content="4가지 간단한 질문과 AI 사진 분석으로 나만의 퍼스널 컬러를 무료로 진단해보세요.">
     <meta name="twitter:image" content="https://global-personal-color.vercel.app/images/og-image.png">
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Find Your Personal Color",
-      "url": "https://global-personal-color.vercel.app/ko/",
-      "description": "4가지 간단한 질문과 AI 사진 분석으로 봄웜, 여름쿨, 가을웜, 겨울쿨 중 나에게 어울리는 퍼스널 컬러를 무료로 진단해보세요. 어울리는 컬러 팔레트와 스타일링 가이드까지 확인할 수 있습니다.",
-      "applicationCategory": "LifestyleApplication",
-      "inLanguage": "ko",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Find Your Personal Color",
+        "url": "https://global-personal-color.vercel.app/ko/",
+        "description": "간단한 질문과 AI 사진 분석으로 나에게 어울리는 퍼스널 컬러를 무료로 진단하는 웹 서비스입니다.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "ko",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
     }
     </script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "퍼스널 컬러 진단이란 무엇인가요?",
-          "acceptedAnswer": { "@type": "Answer", "text": "타고난 피부 톤과 가장 조화를 이루는 최적의 색상을 찾는 과정입니다." }
-        },
-        {
-          "@type": "Question",
-          "name": "AI 카메라 분석은 어떻게 작동하나요?",
-          "acceptedAnswer": { "@type": "Answer", "text": "얼굴 픽셀의 RGB 평균값을 계산하여 즉시 어울리는 계절 팔레트를 제안합니다." }
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "퍼스널 컬러 진단이란 무엇인가요?",
+                "acceptedAnswer": { "@type": "Answer", "text": "타고난 피부 톤과 가장 조화를 이루는 최적의 색상을 찾는 과정입니다." }
+            },
+            {
+                "@type": "Question",
+                "name": "AI 카메라 분석은 어떻게 작동하나요?",
+                "acceptedAnswer": { "@type": "Answer", "text": "얼굴 픽셀의 RGB 평균값을 계산하여 즉시 어울리는 계절 팔레트를 제안합니다." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23E8825A'/><stop offset='33%25' stop-color='%237B93B5'/><stop offset='66%25' stop-color='%23A85C36'/><stop offset='100%25' stop-color='%232B3A55'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23g)'/></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --canvas:#F3EFE6; --card:#FBF9F4; --ink:#2B2420; --ink-soft:#6E6156; --ink-faint:#9A9082;
+            --brand:#6B3F4D; --brand-soft:#EADFE1;
+            --spring:#E8825A; --spring-soft:#F6D9C6;
+            --summer:#7B93B5; --summer-soft:#DCE4EF;
+            --autumn:#A85C36; --autumn-soft:#E6D2C1;
+            --winter:#2B3A55; --winter-soft:#D3D8E1;
+            --border:rgba(43,36,32,0.12); --border-strong:rgba(43,36,32,0.22);
         }
-      ]
-    }
-    </script>
-    <link rel="stylesheet" href="../style.css">
+        *{box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{margin:0;background:var(--canvas);color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;}
+        .serif{font-family:'Fraunces',serif;}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+        a{color:inherit;}
+        .hidden{display:none !important;}
+
+        header{padding:26px 0 0;}
+        .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+        .logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;}
+        .lang-tabs{display:flex;gap:2px;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:3px;}
+        .lang-tabs a{font-size:0.72rem;font-weight:600;letter-spacing:0.03em;padding:6px 12px;border-radius:999px;color:var(--ink-soft);text-decoration:none;}
+        .lang-tabs a.active{background:var(--ink);color:var(--canvas);}
+
+        .hero{padding:56px 0 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;}
+        @media (max-width:860px){.hero{grid-template-columns:1fr;padding:36px 0 16px;text-align:center;}}
+        .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--brand);margin-bottom:20px;}
+        .eyebrow::before{content:"";width:16px;height:1px;background:var(--brand);}
+        @media (max-width:860px){.eyebrow{justify-content:center;}}
+        h1{font-family:'Fraunces',serif;font-weight:500;font-size:2.7rem;line-height:1.18;letter-spacing:-0.015em;margin:0 0 20px;}
+        @media (max-width:860px){h1{font-size:2.05rem;}}
+        h1 em{font-style:italic;font-weight:400;color:var(--brand);}
+        .lede{font-size:1rem;line-height:1.75;color:var(--ink-soft);max-width:440px;margin:0 0 30px;}
+        @media (max-width:860px){.lede{margin-left:auto;margin-right:auto;}}
+        .cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+        @media (max-width:860px){.cta-row{justify-content:center;}}
+        .btn-primary{font-family:'Inter',sans-serif;font-weight:600;font-size:0.95rem;background:var(--ink);color:var(--canvas);border:none;padding:15px 28px;border-radius:10px;cursor:pointer;letter-spacing:-0.01em;transition:transform .15s ease, background .15s ease;}
+        .btn-primary:hover{background:var(--brand);transform:translateY(-1px);}
+        .cta-note{font-size:0.8rem;color:var(--ink-faint);}
+
+        .fan{position:relative;height:300px;display:flex;align-items:center;justify-content:center;}
+        .fcard{position:absolute;width:140px;height:196px;border-radius:14px;box-shadow:0 12px 28px rgba(43,36,32,0.14);display:flex;flex-direction:column;justify-content:space-between;padding:16px 15px;transition:transform .35s cubic-bezier(.2,.8,.2,1);border:1px solid rgba(255,255,255,0.5);}
+        .fcard .fnum{font-family:'Fraunces',serif;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.75;}
+        .fcard .fname{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:500;}
+        .fcard .fdots{display:flex;gap:6px;}
+        .fcard .fdots span{width:12px;height:12px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.06);}
+        .f1{background:linear-gradient(165deg,var(--spring-soft),var(--spring) 130%);color:#5C2E14;transform:rotate(-11deg) translateX(-135px);}
+        .f2{background:linear-gradient(165deg,var(--summer-soft),var(--summer) 130%);color:#1B2A42;transform:rotate(-4deg) translateX(-45px);}
+        .f3{background:linear-gradient(165deg,var(--autumn-soft),var(--autumn) 130%);color:#4A2712;transform:rotate(4deg) translateX(45px);}
+        .f4{background:linear-gradient(165deg,var(--winter-soft),var(--winter) 130%);color:#FFFFFF;transform:rotate(11deg) translateX(135px);}
+        .fcard:hover{transform:translateY(-16px) scale(1.05) !important;z-index:5;box-shadow:0 20px 34px rgba(43,36,32,0.22);}
+        @media (max-width:600px){.fan{height:220px;}.fcard{width:104px;height:150px;padding:12px 11px;}.fcard .fname{font-size:0.9rem;}.f1{transform:rotate(-11deg) translateX(-100px);}.f2{transform:rotate(-4deg) translateX(-33px);}.f3{transform:rotate(4deg) translateX(33px);}.f4{transform:rotate(11deg) translateX(100px);}}
+
+        .tabs{display:flex;gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:44px 0 0;overflow-x:auto;}
+        .tab{flex:1;text-align:center;padding:15px 8px;font-size:0.78rem;font-weight:600;letter-spacing:0.04em;color:var(--ink-faint);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;transition:color .15s ease;}
+        .tab:hover{color:var(--ink);}
+
+        section.block{padding:56px 0;}
+        .guide-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:48px;align-items:start;}
+        @media (max-width:860px){.guide-grid{grid-template-columns:1fr;gap:28px;}}
+        .guide-grid h2{font-size:1.65rem;font-weight:500;line-height:1.3;margin:0 0 16px;}
+        .guide-grid p{font-size:0.96rem;line-height:1.8;color:var(--ink-soft);margin:0 0 16px;}
+        .guide-grid p:last-child{margin-bottom:0;}
+        .index-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 24px 20px;}
+        .index-card .idxlabel{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;}
+        .srow{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);}
+        .srow:last-child{border-bottom:none;}
+        .srow .chip{width:32px;height:32px;border-radius:9px;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.06);}
+        .srow .stxt strong{display:block;font-size:0.9rem;font-weight:600;}
+        .srow .stxt span{font-size:0.8rem;color:var(--ink-soft);}
+        .chip-spring{background:var(--spring);} .chip-summer{background:var(--summer);}
+        .chip-autumn{background:var(--autumn);} .chip-winter{background:var(--winter);}
+
+        .card-panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:34px;max-width:620px;margin:0 auto;}
+        h3.panel-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;margin:0 0 8px;text-align:center;}
+        p.panel-sub{text-align:center;color:var(--ink-soft);font-size:0.92rem;margin:0 0 22px;}
+
+        .btn{display:block;width:100%;padding:15px;background:var(--ink);color:var(--canvas);border:none;border-radius:10px;font-size:0.96rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .15s ease;text-align:center;margin-top:14px;}
+        .btn:hover{background:var(--brand);transform:translateY(-1px);}
+        .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border-strong);}
+        .btn-secondary:hover{background:var(--border);color:var(--ink);}
+
+        .progress-container{background:var(--border);border-radius:10px;height:6px;width:100%;margin-bottom:24px;overflow:hidden;}
+        #progress{background:var(--brand);height:100%;width:0%;transition:width .3s ease;}
+        #question-text{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;text-align:center;margin:0 0 4px;}
+        #answer-buttons{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+        #answer-buttons .btn{background:var(--canvas);color:var(--ink);text-align:left;padding:15px 18px;border:1px solid var(--border);margin-top:0;font-weight:500;}
+        #answer-buttons .btn:hover{border-color:var(--brand);background:var(--brand-soft);transform:none;}
+
+        .badge{display:inline-block;padding:6px 16px;background:var(--ink);color:var(--canvas);border-radius:20px;font-weight:600;font-size:1.05rem;margin-bottom:14px;font-family:'Fraunces',serif;}
+        #color-palette-display{display:flex;gap:13px;margin:18px 0;justify-content:center;}
+        #best-color-title,#match-guide-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.02rem;text-align:center;margin:22px 0 12px;color:var(--ink);}
+        #result-description{text-align:center;color:var(--ink-soft);font-size:0.94rem;}
+        #result-tags{text-align:center;}
+
+        .action-btn{margin-bottom:12px;}
+        .camera-wrapper{position:relative;width:100%;overflow:hidden;border-radius:12px;margin-top:14px;background:#000;}
+        #webcam{width:100%;height:auto;display:block;transform:scaleX(-1);}
+        .face-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60%;height:70%;border:2px dashed rgba(255,255,255,0.6);border-radius:50%;box-shadow:0 0 0 9999px rgba(0,0,0,0.4);pointer-events:none;}
+        #camera-loading{text-align:center;padding:18px 0;font-weight:600;color:var(--brand);}
+
+        .faq-list details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:10px;}
+        .faq-list summary{font-weight:600;font-size:0.96rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+        .faq-list summary::-webkit-details-marker{display:none;}
+        .faq-list summary::after{content:"+";font-size:1.1rem;color:var(--ink-faint);font-weight:400;}
+        .faq-list details[open] summary::after{content:"–";}
+        .faq-list p{margin:12px 0 0;color:var(--ink-soft);font-size:0.9rem;line-height:1.7;}
+
+        footer{padding:40px 0 56px;margin-top:8px;border-top:1px solid var(--border);text-align:center;}
+        footer .flinks a{color:var(--ink-soft);text-decoration:none;font-size:0.85rem;margin:0 10px;}
+        footer .flinks a:hover{color:var(--brand);}
+        footer .fcopy{margin-top:14px;font-size:0.78rem;color:var(--ink-faint);}
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="lang-switcher">
-            <a href="/ko/" id="lang-ko" class="lang-link active">🇰🇷 KO</a>
-            <a href="/en/" id="lang-en" class="lang-link">🇺🇸 EN</a>
-            <a href="/ja/" id="lang-ja" class="lang-link">🇯🇵 JA</a>
-            <a href="/zh/" id="lang-zh" class="lang-link">🇨🇳 ZH</a>
-            <a href="/es/" id="lang-es" class="lang-link">🇪🇸 ES</a>
-        </div>
-        <header><h1>Find Your Personal Color</h1></header>
-        <div class="main-layout-grid">
-            <div class="left-column">
-                <section class="card intro-card">
-                    <h3>✨ 퍼스널 컬러(Personal Color) 가이드</h3>
-                    <p>퍼스널 컬러는 개인이 가진 고유의 신체 색상과 가장 조화를 이루는 핵심 컬러 컬렉션입니다. 맞는 톤을 찾으면 안색이 맑아 보이지만, 맞지 않는 톤은 피부가 칙칙해 보일 수 있습니다.</p>
-                </section>
-                <section class="card celeb-card">
-                    <h3>👑 대표 셀럽 리스트</h3>
-                    <ul><li><span style="color:#ff7675;font-weight:bold;">봄 웜톤:</span> 아이유, 수지</li><li><span style="color:#74b9ff;font-weight:bold;">여름 쿨톤:</span> 손예진, 태연</li><li><span style="color:#b2bec3;font-weight:bold;">가을 웜톤:</span> 제니, 효리</li><li><span style="color:#6c5ce7;font-weight:bold;">겨울 쿨톤:</span> 카리나, 선미</li></ul>
-                </section>
-                <section class="card seo-text-section">
-                    <h2>퍼스널 컬러로 나만의 매력 더하기</h2>
-                    <p>사람은 저마다 타고난 고유의 피부 언더톤과 눈동자 색을 가지고 있습니다. 퍼스널 컬러 진단은 이러한 특징을 봄, 여름, 가을, 겨울의 네 가지 계절 타입으로 분류합니다. 자신에게 맞는 컬러 팔레트를 알면 쇼핑 실패를 줄이고 메이크업과 스타일링 선택의 정확도를 크게 높일 수 있습니다.</p>
-                </section>
-            </div>
-            <div class="right-column">
-                <section id="quiz-container" class="card quiz-card">
-                    <div id="start-view">
-                        <h3 style="text-align: center; margin-bottom: 15px;">🎨 나만의 퍼스널 컬러 진단</h3>
-                        <p style="text-align: center; margin-bottom: 20px;">간단한 시각적 질문을 통해 사계절 퍼스널 컬러를 즉시 찾아보세요.</p>
-                        <button id="start-btn" class="btn">퍼스널 컬러 테스트 시작하기</button>
-                    </div>
-                    <div id="question-view" class="hidden">
-                        <div class="progress-container"><div id="progress"></div></div>
-                        <h3 id="question-text">Question Loading...</h3>
-                        <div id="answer-buttons"></div>
-                    </div>
-                    <div id="result-view" class="hidden">
-                        <h3 style="margin-bottom: 5px;">🎉 당신의 퍼스널 컬러 진단 결과</h3>
-                        <div id="result-tags"></div>
-                        <p id="result-description" style="margin-bottom: 25px;"></p>
-                        <h4 id="best-color-title" style="font-weight: 700; margin-bottom: 12px; color:#2d3436;"></h4>
-                        <div id="color-palette-display"></div>
-                        <h4 id="match-guide-title" style="font-weight: 700; margin-top: 25px; margin-bottom: 12px; color:#2d3436;"></h4>
-                        <button id="restart-btn" class="btn" style="background: #2d3436;">다시 테스트하기</button>
-                    </div>
-                </section>
-                <section id="analysis-card-zone" class="card upload-card">
-                    <h3>📸 AI 스마트 분석 및 진단 (Beta)</h3>
-                    <p style="margin-bottom: 15px;">정확한 분석을 위해 얼굴이 정면으로 잘 나온 밝은 사진을 사용해 주세요. 데이터는 외부 서버에 절대 저장되지 않습니다.</p>
-                    <div class="upload-btn-group">
-                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">실시간 카메라 작동하기</button>
-                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 기존 사진 업로드하기</button>
-                    </div>
-                    <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
-                    <div id="camera-zone" class="hidden">
-                        <div class="camera-wrapper">
-                            <video id="webcam" autoplay playsinline muted></video>
-                            <div class="face-overlay"></div>
-                        </div>
-                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">📸 사진 촬영 및 AI 분석하기</button>
-                    </div>
-                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">⏳ AI가 실시간 피부 톤 분석 중...</div>
-                    <canvas id="calc-canvas" class="hidden"></canvas>
-                </section>
-                <section class="card faq-section">
-                    <h2>자주 묻는 질문 (FAQ)</h2>
-                    <div class="faq-item">
-                        <h3>퍼스널 컬러 진단이란 무엇인가요?</h3>
-                        <p>타고난 피부 톤과 가장 조화를 이루는 최적의 색상을 찾는 과정입니다.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>AI 카메라 분석은 어떻게 작동하나요?</h3>
-                        <p>얼굴 픽셀의 RGB 평균값을 계산하여 즉시 어울리는 계절 팔레트를 제안합니다.</p>
-                    </div>
-                </section>
+    <header class="wrap">
+        <div class="nav">
+            <a href="/ko/" class="logo">Find Your Personal Color</a>
+            <div class="lang-tabs">
+                <a href="/ko/" id="lang-ko" class="active">KO</a>
+                <a href="/en/" id="lang-en">EN</a>
+                <a href="/ja/" id="lang-ja">JA</a>
+                <a href="/es/" id="lang-es">ES</a>
+                <a href="/zh/" id="lang-zh">ZH</a>
             </div>
         </div>
-        <footer style="margin-top:40px; text-align:center; padding:20px; font-size:0.85rem;">
-            <p>
-                <a href="/ko/about.html">서비스 소개</a> |
-                <a href="/ko/privacy.html">개인정보처리방침</a> |
-                <a href="/ko/terms.html">이용약관</a> |
-                <a href="/ko/contact.html">문의하기</a>
-            </p>
-            <p style="margin-top:8px;">© 2026 Find Your Personal Color. All rights reserved.</p>
-        </footer>
+    </header>
+
+    <section class="wrap hero">
+        <div>
+            <div class="eyebrow">Personal Color Diagnosis</div>
+            <h1>당신의 얼굴에도<br><em>계절</em>이 있습니다</h1>
+            <p class="lede">타고난 피부·눈동자·머리카락의 색을 4가지 계절로 진단하고, 당신에게 가장 잘 어울리는 컬러 팔레트를 찾아드립니다.</p>
+            <div class="cta-row">
+                <button class="btn-primary" onclick="startQuiz();document.getElementById('quiz-container').scrollIntoView({behavior:'smooth'});">무료로 진단 시작하기</button>
+                <span class="cta-note">4문항 · 소요시간 1분</span>
+            </div>
+        </div>
+        <div class="fan">
+            <div class="fcard f1"><span class="fnum">01 · Spring</span><span class="fname">봄 웜톤</span><span class="fdots"><span style="background:#FF8C69"></span><span style="background:#FFD59A"></span><span style="background:#F6C9AD"></span></span></div>
+            <div class="fcard f2"><span class="fnum">02 · Summer</span><span class="fname">여름 쿨톤</span><span class="fdots"><span style="background:#B9C6DC"></span><span style="background:#DCE4EF"></span><span style="background:#8AA9D6"></span></span></div>
+            <div class="fcard f3"><span class="fnum">03 · Autumn</span><span class="fname">가을 웜톤</span><span class="fdots"><span style="background:#8C4A24"></span><span style="background:#C98452"></span><span style="background:#E6D2C1"></span></span></div>
+            <div class="fcard f4"><span class="fnum">04 · Winter</span><span class="fname">겨울 쿨톤</span><span class="fdots"><span style="background:#FFFFFF"></span><span style="background:#7A8CA8"></span><span style="background:#12182A"></span></span></div>
+        </div>
+    </section>
+
+    <div class="wrap">
+        <div class="tabs">
+            <a class="tab" href="#guide">가이드</a>
+            <a class="tab" href="#quiz-container">진단하기</a>
+            <a class="tab" href="#analysis-card-zone">AI 분석</a>
+            <a class="tab" href="#faq">FAQ</a>
+        </div>
     </div>
-    <script>document.getElementById('lang-ko').classList.add('active'); const camErrorMsg = "카메라를 시작할 수 없습니다. 권한을 확인해 주시거나, 대신 [기존 사진 업로드] 기능을 사용해 주세요!";</script>
+
+    <section class="wrap block guide-grid" id="guide">
+        <div>
+            <h2 class="serif">퍼스널 컬러 가이드</h2>
+            <p>퍼스널 컬러는 개인이 가진 고유의 신체 색상과 가장 조화를 이루는 핵심 컬러 컬렉션입니다. 맞는 톤을 찾으면 안색이 맑아 보이지만, 맞지 않는 톤은 피부가 칙칙해 보일 수 있습니다.</p>
+            <p>사람은 저마다 타고난 고유의 피부 언더톤과 눈동자 색을 가지고 있습니다. 퍼스널 컬러 진단은 이러한 특징을 봄, 여름, 가을, 겨울의 네 가지 계절 타입으로 분류합니다. 자신에게 맞는 컬러 팔레트를 알면 쇼핑 실패를 줄이고 메이크업과 스타일링 선택의 정확도를 크게 높일 수 있습니다.</p>
+        </div>
+        <div class="index-card">
+            <div class="idxlabel">4 Seasons at a glance</div>
+            <div class="srow"><span class="chip chip-spring"></span><div class="stxt"><strong>봄 웜톤</strong><span>아이유, 수지 · 화사한 피치, 코랄</span></div></div>
+            <div class="srow"><span class="chip chip-summer"></span><div class="stxt"><strong>여름 쿨톤</strong><span>손예진, 태연 · 맑은 라벤더, 스카이블루</span></div></div>
+            <div class="srow"><span class="chip chip-autumn"></span><div class="stxt"><strong>가을 웜톤</strong><span>제니, 효리 · 깊은 카키, 버건디</span></div></div>
+            <div class="srow"><span class="chip chip-winter"></span><div class="stxt"><strong>겨울 쿨톤</strong><span>카리나, 선미 · 선명한 블랙, 네이비</span></div></div>
+        </div>
+    </section>
+
+    <section class="wrap block" id="quiz-container">
+        <div class="card-panel">
+            <div id="start-view">
+                <h3 class="panel-title">🎨 나만의 퍼스널 컬러 진단</h3>
+                <p class="panel-sub">간단한 시각적 질문을 통해 사계절 퍼스널 컬러를 즉시 찾아보세요.</p>
+                <button id="start-btn" class="btn">퍼스널 컬러 테스트 시작하기</button>
+            </div>
+
+            <div id="question-view" class="hidden">
+                <div class="progress-container"><div id="progress"></div></div>
+                <h3 id="question-text">Question Loading...</h3>
+                <div id="answer-buttons"></div>
+            </div>
+
+            <div id="result-view" class="hidden">
+                <h3 class="panel-title">🎉 당신의 퍼스널 컬러 진단 결과</h3>
+                <div id="result-tags"></div>
+                <p id="result-description"></p>
+                <h4 id="best-color-title"></h4>
+                <div id="color-palette-display"></div>
+                <h4 id="match-guide-title"></h4>
+                <button id="restart-btn" class="btn btn-secondary">다시 테스트하기</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrap block" id="analysis-card-zone">
+        <div class="card-panel">
+            <h3 class="panel-title">📸 AI 스마트 분석 및 진단 (Beta)</h3>
+            <p class="panel-sub">정확한 분석을 위해 얼굴이 정면으로 잘 나온 밝은 사진을 사용해 주세요. 데이터는 외부 서버에 절대 저장되지 않습니다.</p>
+
+            <button id="init-cam-btn" class="btn action-btn">실시간 카메라 작동하기</button>
+            <button id="trigger-file-btn" class="btn btn-secondary action-btn">📁 기존 사진 업로드하기</button>
+
+            <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
+
+            <div id="camera-zone" class="hidden">
+                <div class="camera-wrapper">
+                    <video id="webcam" autoplay playsinline muted></video>
+                    <div class="face-overlay"></div>
+                </div>
+                <button id="capture-btn" class="btn">📸 사진 촬영 및 AI 분석하기</button>
+            </div>
+
+            <div id="camera-loading" class="hidden">⏳ AI가 실시간 피부 톤 분석 중...</div>
+            <canvas id="calc-canvas" class="hidden"></canvas>
+        </div>
+    </section>
+
+    <section class="wrap block" id="faq" style="max-width:760px;">
+        <h2 class="serif" style="text-align:center;margin-bottom:24px;">자주 묻는 질문</h2>
+        <div class="faq-list">
+            <details>
+                <summary>퍼스널 컬러 진단이란 무엇인가요?</summary>
+                <p>타고난 피부 톤과 가장 조화를 이루는 최적의 색상을 찾는 과정입니다.</p>
+            </details>
+            <details>
+                <summary>AI 카메라 분석은 어떻게 작동하나요?</summary>
+                <p>얼굴 픽셀의 RGB 평균값을 계산하여 즉시 어울리는 계절 팔레트를 제안합니다.</p>
+            </details>
+        </div>
+    </section>
+
+    <footer class="wrap">
+        <div class="flinks">
+            <a href="/ko/about.html">서비스 소개</a>
+            <a href="/ko/privacy.html">개인정보처리방침</a>
+            <a href="/ko/terms.html">이용약관</a>
+            <a href="/ko/contact.html">문의하기</a>
+        </div>
+        <div class="fcopy">© 2026 Find Your Personal Color. All rights reserved.</div>
+    </footer>
+
+    <script>
+        const camErrorMsg = "카메라를 시작할 수 없습니다. 권한을 확인해 주시거나, 대신 [기존 사진 업로드] 기능을 사용해 주세요!";
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -36,6 +36,7 @@
       "url": "https://global-personal-color.vercel.app/zh/",
       "description": "免费在线个人色彩测试。通过简单的视觉问答和AI拍照分析，找到属于你的春夏秋冬色彩类型，获取专属配色方案与穿搭指南。",
       "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
       "inLanguage": "zh",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
@@ -58,97 +59,257 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23E8825A'/><stop offset='33%25' stop-color='%237B93B5'/><stop offset='66%25' stop-color='%23A85C36'/><stop offset='100%25' stop-color='%232B3A55'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23g)'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --canvas:#F3EFE6; --card:#FBF9F4; --ink:#2B2420; --ink-soft:#6E6156; --ink-faint:#9A9082;
+            --brand:#6B3F4D; --brand-soft:#EADFE1;
+            --spring:#E8825A; --spring-soft:#F6D9C6;
+            --summer:#7B93B5; --summer-soft:#DCE4EF;
+            --autumn:#A85C36; --autumn-soft:#E6D2C1;
+            --winter:#2B3A55; --winter-soft:#D3D8E1;
+            --border:rgba(43,36,32,0.12); --border-strong:rgba(43,36,32,0.22);
+        }
+        *{box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{margin:0;background:var(--canvas);color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;}
+        .serif{font-family:'Fraunces',serif;}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+        a{color:inherit;}
+        .hidden{display:none !important;}
+
+        header{padding:26px 0 0;}
+        .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+        .logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;}
+        .lang-tabs{display:flex;gap:2px;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:3px;}
+        .lang-tabs a{font-size:0.72rem;font-weight:600;letter-spacing:0.03em;padding:6px 12px;border-radius:999px;color:var(--ink-soft);text-decoration:none;}
+        .lang-tabs a.active{background:var(--ink);color:var(--canvas);}
+
+        .hero{padding:56px 0 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;}
+        @media (max-width:860px){.hero{grid-template-columns:1fr;padding:36px 0 16px;text-align:center;}}
+        .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--brand);margin-bottom:20px;}
+        .eyebrow::before{content:"";width:16px;height:1px;background:var(--brand);}
+        @media (max-width:860px){.eyebrow{justify-content:center;}}
+        h1{font-family:'Fraunces',serif;font-weight:500;font-size:2.7rem;line-height:1.18;letter-spacing:-0.015em;margin:0 0 20px;}
+        @media (max-width:860px){h1{font-size:2.05rem;}}
+        h1 em{font-style:italic;font-weight:400;color:var(--brand);}
+        .lede{font-size:1rem;line-height:1.75;color:var(--ink-soft);max-width:440px;margin:0 0 30px;}
+        @media (max-width:860px){.lede{margin-left:auto;margin-right:auto;}}
+        .cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+        @media (max-width:860px){.cta-row{justify-content:center;}}
+        .btn-primary{font-family:'Inter',sans-serif;font-weight:600;font-size:0.95rem;background:var(--ink);color:var(--canvas);border:none;padding:15px 28px;border-radius:10px;cursor:pointer;letter-spacing:-0.01em;transition:transform .15s ease, background .15s ease;}
+        .btn-primary:hover{background:var(--brand);transform:translateY(-1px);}
+        .cta-note{font-size:0.8rem;color:var(--ink-faint);}
+
+        .fan{position:relative;height:300px;display:flex;align-items:center;justify-content:center;}
+        .fcard{position:absolute;width:140px;height:196px;border-radius:14px;box-shadow:0 12px 28px rgba(43,36,32,0.14);display:flex;flex-direction:column;justify-content:space-between;padding:16px 15px;transition:transform .35s cubic-bezier(.2,.8,.2,1);border:1px solid rgba(255,255,255,0.5);}
+        .fcard .fnum{font-family:'Fraunces',serif;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.75;}
+        .fcard .fname{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:500;}
+        .fcard .fdots{display:flex;gap:6px;}
+        .fcard .fdots span{width:12px;height:12px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.06);}
+        .f1{background:linear-gradient(165deg,var(--spring-soft),var(--spring) 130%);color:#5C2E14;transform:rotate(-11deg) translateX(-135px);}
+        .f2{background:linear-gradient(165deg,var(--summer-soft),var(--summer) 130%);color:#1B2A42;transform:rotate(-4deg) translateX(-45px);}
+        .f3{background:linear-gradient(165deg,var(--autumn-soft),var(--autumn) 130%);color:#4A2712;transform:rotate(4deg) translateX(45px);}
+        .f4{background:linear-gradient(165deg,var(--winter-soft),var(--winter) 130%);color:#FFFFFF;transform:rotate(11deg) translateX(135px);}
+        .fcard:hover{transform:translateY(-16px) scale(1.05) !important;z-index:5;box-shadow:0 20px 34px rgba(43,36,32,0.22);}
+        @media (max-width:600px){.fan{height:220px;}.fcard{width:104px;height:150px;padding:12px 11px;}.fcard .fname{font-size:0.9rem;}.f1{transform:rotate(-11deg) translateX(-100px);}.f2{transform:rotate(-4deg) translateX(-33px);}.f3{transform:rotate(4deg) translateX(33px);}.f4{transform:rotate(11deg) translateX(100px);}}
+
+        .tabs{display:flex;gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:44px 0 0;overflow-x:auto;}
+        .tab{flex:1;text-align:center;padding:15px 8px;font-size:0.78rem;font-weight:600;letter-spacing:0.04em;color:var(--ink-faint);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;transition:color .15s ease;}
+        .tab:hover{color:var(--ink);}
+
+        section.block{padding:56px 0;}
+        .guide-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:48px;align-items:start;}
+        @media (max-width:860px){.guide-grid{grid-template-columns:1fr;gap:28px;}}
+        .guide-grid h2{font-size:1.65rem;font-weight:500;line-height:1.3;margin:0 0 16px;}
+        .guide-grid p{font-size:0.96rem;line-height:1.8;color:var(--ink-soft);margin:0 0 16px;}
+        .guide-grid p:last-child{margin-bottom:0;}
+        .index-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 24px 20px;}
+        .index-card .idxlabel{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;}
+        .srow{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);}
+        .srow:last-child{border-bottom:none;}
+        .srow .chip{width:32px;height:32px;border-radius:9px;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.06);}
+        .srow .stxt strong{display:block;font-size:0.9rem;font-weight:600;}
+        .srow .stxt span{font-size:0.8rem;color:var(--ink-soft);}
+        .chip-spring{background:var(--spring);} .chip-summer{background:var(--summer);}
+        .chip-autumn{background:var(--autumn);} .chip-winter{background:var(--winter);}
+
+        .card-panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:34px;max-width:620px;margin:0 auto;}
+        h3.panel-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;margin:0 0 8px;text-align:center;}
+        p.panel-sub{text-align:center;color:var(--ink-soft);font-size:0.92rem;margin:0 0 22px;}
+
+        .btn{display:block;width:100%;padding:15px;background:var(--ink);color:var(--canvas);border:none;border-radius:10px;font-size:0.96rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .15s ease;text-align:center;margin-top:14px;}
+        .btn:hover{background:var(--brand);transform:translateY(-1px);}
+        .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--border-strong);}
+        .btn-secondary:hover{background:var(--border);color:var(--ink);}
+
+        .progress-container{background:var(--border);border-radius:10px;height:6px;width:100%;margin-bottom:24px;overflow:hidden;}
+        #progress{background:var(--brand);height:100%;width:0%;transition:width .3s ease;}
+        #question-text{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;text-align:center;margin:0 0 4px;}
+        #answer-buttons{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+        #answer-buttons .btn{background:var(--canvas);color:var(--ink);text-align:left;padding:15px 18px;border:1px solid var(--border);margin-top:0;font-weight:500;}
+        #answer-buttons .btn:hover{border-color:var(--brand);background:var(--brand-soft);transform:none;}
+
+        .badge{display:inline-block;padding:6px 16px;background:var(--ink);color:var(--canvas);border-radius:20px;font-weight:600;font-size:1.05rem;margin-bottom:14px;font-family:'Fraunces',serif;}
+        #color-palette-display{display:flex;gap:13px;margin:18px 0;justify-content:center;}
+        #best-color-title,#match-guide-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.02rem;text-align:center;margin:22px 0 12px;color:var(--ink);}
+        #result-description{text-align:center;color:var(--ink-soft);font-size:0.94rem;}
+        #result-tags{text-align:center;}
+
+        .action-btn{margin-bottom:12px;}
+        .camera-wrapper{position:relative;width:100%;overflow:hidden;border-radius:12px;margin-top:14px;background:#000;}
+        #webcam{width:100%;height:auto;display:block;transform:scaleX(-1);}
+        .face-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60%;height:70%;border:2px dashed rgba(255,255,255,0.6);border-radius:50%;box-shadow:0 0 0 9999px rgba(0,0,0,0.4);pointer-events:none;}
+        #camera-loading{text-align:center;padding:18px 0;font-weight:600;color:var(--brand);}
+
+        .faq-list details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:10px;}
+        .faq-list summary{font-weight:600;font-size:0.96rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+        .faq-list summary::-webkit-details-marker{display:none;}
+        .faq-list summary::after{content:"+";font-size:1.1rem;color:var(--ink-faint);font-weight:400;}
+        .faq-list details[open] summary::after{content:"\2013";}
+        .faq-list p{margin:12px 0 0;color:var(--ink-soft);font-size:0.9rem;line-height:1.7;}
+
+        footer{padding:40px 0 56px;margin-top:8px;border-top:1px solid var(--border);text-align:center;}
+        footer .flinks a{color:var(--ink-soft);text-decoration:none;font-size:0.85rem;margin:0 10px;}
+        footer .flinks a:hover{color:var(--brand);}
+        footer .fcopy{margin-top:14px;font-size:0.78rem;color:var(--ink-faint);}
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="lang-switcher">
-            <a href="/ko/" id="lang-ko" class="lang-link">🇰🇷 KO</a>
-            <a href="/en/" id="lang-en" class="lang-link">🇺🇸 EN</a>
-            <a href="/ja/" id="lang-ja" class="lang-link">🇯🇵 JA</a>
-            <a href="/zh/" id="lang-zh" class="lang-link active">🇨🇳 ZH</a>
-            <a href="/es/" id="lang-es" class="lang-link">🇪🇸 ES</a>
-        </div>
-        <header><h1>Find Your Personal Color</h1></header>
-        <div class="main-layout-grid">
-            <div class="left-column">
-                <section class="card intro-card">
-                    <h3>✨ 个人色彩(Personal Color)指南</h3>
-                    <p>个人色彩是与你天生的肤色、瞳色和发色最协调的核心色彩组合。找到适合自己的色调会让气色更加明亮，而不合适的色调则可能让皮肤看起来暗沉。</p>
-                </section>
-                <section class="card celeb-card">
-                    <h3>👑 代表明星列表</h3>
-                    <ul><li><span style="color:#ff7675;font-weight:bold;">春季暖色:</span> 迪丽热巴, 杨紫</li><li><span style="color:#74b9ff;font-weight:bold;">夏季冷色:</span> 刘亦菲, 倪妮</li><li><span style="color:#b2bec3;font-weight:bold;">秋季暖色:</span> 巩俐, 周迅</li><li><span style="color:#6c5ce7;font-weight:bold;">冬季冷色:</span> 章子怡, 范冰冰</li></ul>
-                </section>
-                <section class="card seo-text-section">
-                    <h2>用个人色彩提升你的魅力</h2>
-                    <p>每个人天生都拥有独特的肤色底调和瞳色。个人色彩分析将这些特征划分为春、夏、秋、冬四种季节类型。了解自己专属的色彩范围，能有效减少购物踩雷，并大幅提升妆容与穿搭的精准度。</p>
-                </section>
-            </div>
-            <div class="right-column">
-                <section id="quiz-container" class="card quiz-card">
-                    <div id="start-view">
-                        <h3 style="text-align: center; margin-bottom: 15px;">🎨 个人色彩诊断测试</h3>
-                        <p style="text-align: center; margin-bottom: 20px;">只需回答几个简单的视觉问题，即可立即找到你的专属季节色彩类型。</p>
-                        <button id="start-btn" class="btn">开始诊断测试</button>
-                    </div>
-                    <div id="question-view" class="hidden">
-                        <div class="progress-container"><div id="progress"></div></div>
-                        <h3 id="question-text">Question Loading...</h3>
-                        <div id="answer-buttons"></div>
-                    </div>
-                    <div id="result-view" class="hidden">
-                        <h3 style="margin-bottom: 5px;">🎉 你的个人色彩诊断结果</h3>
-                        <div id="result-tags"></div>
-                        <p id="result-description" style="margin-bottom: 25px;"></p>
-                        <h4 id="best-color-title" style="font-weight: 700; margin-bottom: 12px; color:#2d3436;"></h4>
-                        <div id="color-palette-display"></div>
-                        <h4 id="match-guide-title" style="font-weight: 700; margin-top: 25px; margin-bottom: 12px; color:#2d3436;"></h4>
-                        <button id="restart-btn" class="btn" style="background: #2d3436;">重新测试</button>
-                    </div>
-                </section>
-                <section id="analysis-card-zone" class="card upload-card">
-                    <h3>📸 AI智能分析诊断 (Beta)</h3>
-                    <p style="margin-bottom: 15px;">为了保证分析准确，请使用光线充足、正面清晰的照片。数据绝不会保存在外部服务器上。</p>
-                    <div class="upload-btn-group">
-                        <button id="init-cam-btn" class="btn action-btn" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">开启实时摄像头</button>
-                        <button id="trigger-file-btn" class="btn action-btn" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">📁 上传已有照片</button>
-                    </div>
-                    <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
-                    <div id="camera-zone" class="hidden">
-                        <div class="camera-wrapper">
-                            <video id="webcam" autoplay playsinline muted></video>
-                            <div class="face-overlay"></div>
-                        </div>
-                        <button id="capture-btn" class="btn" style="background: linear-gradient(135deg, #00cec9, #00b894);">📸 拍照并进行AI分析</button>
-                    </div>
-                    <div id="camera-loading" class="hidden" style="text-align:center; padding: 20px 0; font-weight: bold; color: #6c5ce7;">⏳ AI正在实时分析肤色中...</div>
-                    <canvas id="calc-canvas" class="hidden"></canvas>
-                </section>
-                <section class="card faq-section">
-                    <h2>常见问题 (FAQ)</h2>
-                    <div class="faq-item">
-                        <h3>什么是个人色彩诊断？</h3>
-                        <p>这是一种寻找与你天生肤色最协调的最佳色彩的方法。</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>AI摄像头分析是如何工作的？</h3>
-                        <p>系统会计算你面部像素的RGB平均值，从而即时匹配相应的季节色彩类型。</p>
-                    </div>
-                </section>
+    <header class="wrap">
+        <div class="nav">
+            <a href="/zh/" class="logo">Find Your Personal Color</a>
+            <div class="lang-tabs">
+                <a href="/ko/" id="lang-ko">KO</a>
+                <a href="/en/" id="lang-en">EN</a>
+                <a href="/ja/" id="lang-ja">JA</a>
+                <a href="/es/" id="lang-es">ES</a>
+                <a href="/zh/" id="lang-zh" class="active">ZH</a>
             </div>
         </div>
-        <footer style="margin-top:40px; text-align:center; padding:20px; font-size:0.85rem;">
-            <p>
-                <a href="/zh/about.html">关于我们</a> |
-                <a href="/zh/privacy.html">隐私政策</a> |
-                <a href="/zh/terms.html">使用条款</a> |
-                <a href="/zh/contact.html">联系我们</a>
-            </p>
-            <p style="margin-top:8px;">© 2026 Find Your Personal Color. All rights reserved.</p>
-        </footer>
+    </header>
+
+    <section class="wrap hero">
+        <div>
+            <div class="eyebrow">Personal Color Diagnosis</div>
+            <h1>你的脸也有<br>属于自己的<em>季节</em></h1>
+            <p class="lede">通过四季分析你天生的肤色、瞳色与发色，为你找到最适合的专属色彩搭配。</p>
+            <div class="cta-row">
+                <button class="btn-primary" onclick="startQuiz();document.getElementById('quiz-container').scrollIntoView({behavior:'smooth'});">免费开始诊断</button>
+                <span class="cta-note">4个问题 · 用时1分钟</span>
+            </div>
+        </div>
+        <div class="fan">
+            <div class="fcard f1"><span class="fnum">01 &middot; Spring</span><span class="fname">春季暖色</span><span class="fdots"><span style="background:#FF8C69"></span><span style="background:#FFD59A"></span><span style="background:#F6C9AD"></span></span></div>
+            <div class="fcard f2"><span class="fnum">02 &middot; Summer</span><span class="fname">夏季冷色</span><span class="fdots"><span style="background:#B9C6DC"></span><span style="background:#DCE4EF"></span><span style="background:#8AA9D6"></span></span></div>
+            <div class="fcard f3"><span class="fnum">03 &middot; Autumn</span><span class="fname">秋季暖色</span><span class="fdots"><span style="background:#8C4A24"></span><span style="background:#C98452"></span><span style="background:#E6D2C1"></span></span></div>
+            <div class="fcard f4"><span class="fnum">04 &middot; Winter</span><span class="fname">冬季冷色</span><span class="fdots"><span style="background:#FFFFFF"></span><span style="background:#7A8CA8"></span><span style="background:#12182A"></span></span></div>
+        </div>
+    </section>
+
+    <div class="wrap">
+        <div class="tabs">
+            <a class="tab" href="#guide">个人色彩指南</a>
+            <a class="tab" href="#quiz-container">诊断</a>
+            <a class="tab" href="#analysis-card-zone">AI</a>
+            <a class="tab" href="#faq">FAQ</a>
+        </div>
     </div>
-    <script>document.getElementById('lang-zh').classList.add('active'); const camErrorMsg = "无法启动摄像头，请检查权限设置，或改用[上传照片]功能。";</script>
+
+    <section class="wrap block guide-grid" id="guide">
+        <div>
+            <h2 class="serif">个人色彩指南</h2>
+            <p>个人色彩是与你天生的肤色、瞳色和发色最协调的核心色彩组合。找到适合自己的色调会让气色更加明亮，而不合适的色调则可能让皮肤看起来暗沉。</p>
+            <p>每个人天生都拥有独特的肤色底调和瞳色。个人色彩分析将这些特征划分为春、夏、秋、冬四种季节类型。了解自己专属的色彩范围，能有效减少购物踩雷，并大幅提升妆容与穿搭的精准度。</p>
+        </div>
+        <div class="index-card">
+            <div class="idxlabel">4 Seasons at a glance</div>
+            <div class="srow"><span class="chip chip-spring"></span><div class="stxt"><strong>春季暖色</strong><span>迪丽热巴, 杨紫 &middot; 明快的蜜桃色、珊瑚色</span></div></div>
+            <div class="srow"><span class="chip chip-summer"></span><div class="stxt"><strong>夏季冷色</strong><span>刘亦菲, 倪妮 &middot; 清透的薰衣草紫、天空蓝</span></div></div>
+            <div class="srow"><span class="chip chip-autumn"></span><div class="stxt"><strong>秋季暖色</strong><span>巩俐, 周迅 &middot; 浓郁的卡其色、酒红色</span></div></div>
+            <div class="srow"><span class="chip chip-winter"></span><div class="stxt"><strong>冬季冷色</strong><span>章子怡, 范冰冰 &middot; 鲜明的黑色、藏青色</span></div></div>
+        </div>
+    </section>
+
+    <section class="wrap block" id="quiz-container">
+        <div class="card-panel">
+            <div id="start-view">
+                <h3 class="panel-title">🎨 个人色彩诊断测试</h3>
+                <p class="panel-sub">只需回答几个简单的视觉问题，即可立即找到你的专属季节色彩类型。</p>
+                <button id="start-btn" class="btn">开始诊断测试</button>
+            </div>
+
+            <div id="question-view" class="hidden">
+                <div class="progress-container"><div id="progress"></div></div>
+                <h3 id="question-text">Question Loading...</h3>
+                <div id="answer-buttons"></div>
+            </div>
+
+            <div id="result-view" class="hidden">
+                <h3 class="panel-title">🎉 你的个人色彩诊断结果</h3>
+                <div id="result-tags"></div>
+                <p id="result-description"></p>
+                <h4 id="best-color-title"></h4>
+                <div id="color-palette-display"></div>
+                <h4 id="match-guide-title"></h4>
+                <button id="restart-btn" class="btn btn-secondary">重新测试</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrap block" id="analysis-card-zone">
+        <div class="card-panel">
+            <h3 class="panel-title">📸 AI智能分析诊断 (Beta)</h3>
+            <p class="panel-sub">为了保证分析准确，请使用光线充足、正面清晰的照片。数据绝不会保存在外部服务器上。</p>
+
+            <button id="init-cam-btn" class="btn action-btn">开启实时摄像头</button>
+            <button id="trigger-file-btn" class="btn btn-secondary action-btn">📁 上传已有照片</button>
+
+            <input type="file" id="image-file-input" accept="image/*" style="display: none !important;">
+
+            <div id="camera-zone" class="hidden">
+                <div class="camera-wrapper">
+                    <video id="webcam" autoplay playsinline muted></video>
+                    <div class="face-overlay"></div>
+                </div>
+                <button id="capture-btn" class="btn">📸 拍照并进行AI分析</button>
+            </div>
+
+            <div id="camera-loading" class="hidden">⏳ AI正在实时分析肤色中...</div>
+            <canvas id="calc-canvas" class="hidden"></canvas>
+        </div>
+    </section>
+
+    <section class="wrap block" id="faq" style="max-width:760px;">
+        <h2 class="serif" style="text-align:center;margin-bottom:24px;">常见问题</h2>
+        <div class="faq-list">
+            <details>
+                <summary>什么是个人色彩诊断？</summary>
+                <p>这是一种寻找与你天生肤色最协调的最佳色彩的方法。</p>
+            </details>
+            <details>
+                <summary>AI摄像头分析是如何工作的？</summary>
+                <p>系统会计算你面部像素的RGB平均值，从而即时匹配相应的季节色彩类型。</p>
+            </details>
+        </div>
+    </section>
+
+    <footer class="wrap">
+        <div class="flinks">
+            <a href="/zh/about.html">关于我们</a>
+            <a href="/zh/privacy.html">隐私政策</a>
+            <a href="/zh/terms.html">使用条款</a>
+            <a href="/zh/contact.html">联系我们</a>
+        </div>
+        <div class="fcopy">© 2026 Find Your Personal Color. All rights reserved.</div>
+    </footer>
+
+    <script>
+        const camErrorMsg = "无法启动摄像头，请检查权限设置，或改用[上传照片]功能。";
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
