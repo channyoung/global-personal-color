@@ -4,7 +4,7 @@
   <!-- Home pages (per language), cross-linked with hreflang -->
   <url>
     <loc>https://findyourpersonalcolor.com/ko/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://findyourpersonalcolor.com/ko/"/>
@@ -12,11 +12,12 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://findyourpersonalcolor.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://findyourpersonalcolor.com/ko/"/>
@@ -24,11 +25,12 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://findyourpersonalcolor.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://findyourpersonalcolor.com/ko/"/>
@@ -36,11 +38,12 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://findyourpersonalcolor.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://findyourpersonalcolor.com/ko/"/>
@@ -48,11 +51,12 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://findyourpersonalcolor.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://findyourpersonalcolor.com/ko/"/>
@@ -60,37 +64,57 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://findyourpersonalcolor.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://findyourpersonalcolor.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findyourpersonalcolor.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://findyourpersonalcolor.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
 
   <!-- About pages -->
   <url>
     <loc>https://findyourpersonalcolor.com/ko/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/about.html</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -98,31 +122,37 @@
   <!-- Privacy pages -->
   <url>
     <loc>https://findyourpersonalcolor.com/ko/privacy.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/privacy.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/privacy.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/privacy.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/privacy.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/privacy.html</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -130,31 +160,37 @@
   <!-- Terms pages -->
   <url>
     <loc>https://findyourpersonalcolor.com/ko/terms.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/terms.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/terms.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/terms.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/terms.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/terms.html</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -162,487 +198,591 @@
   <!-- Contact pages -->
   <url>
     <loc>https://findyourpersonalcolor.com/ko/contact.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/contact.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/contact.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/contact.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/contact.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/contact.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- Guide articles (ko) -->
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/what-is-personal-color.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/spring-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/warm-vs-cool-tone.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/how-accurate-is-ai-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/draping-vs-online-quiz.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/summer-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/autumn-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/winter-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/lipstick-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/hair-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/interview-wedding-styling.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/photo-tips-for-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/color-trends-2026.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ko/guide/color-psychology-confidence.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <!-- Guide articles (en) -->
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/what-is-personal-color.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/spring-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/warm-vs-cool-tone.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/how-accurate-is-ai-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/draping-vs-online-quiz.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/summer-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/autumn-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/winter-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/lipstick-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/hair-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/interview-wedding-styling.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/photo-tips-for-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/color-trends-2026.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/en/guide/color-psychology-confidence.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <!-- Guide articles (ja) -->
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/what-is-personal-color.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/spring-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/warm-vs-cool-tone.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/how-accurate-is-ai-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/draping-vs-online-quiz.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/summer-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/autumn-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/winter-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/lipstick-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/hair-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/interview-wedding-styling.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/photo-tips-for-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/color-trends-2026.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/ja/guide/color-psychology-confidence.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <!-- Guide articles (es) -->
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/what-is-personal-color.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/spring-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/warm-vs-cool-tone.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/how-accurate-is-ai-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/draping-vs-online-quiz.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/summer-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/autumn-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/winter-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/lipstick-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/hair-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/interview-wedding-styling.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/photo-tips-for-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/color-trends-2026.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/es/guide/color-psychology-confidence.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <!-- Guide articles (zh) -->
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/what-is-personal-color.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/spring-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/warm-vs-cool-tone.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/how-accurate-is-ai-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/draping-vs-online-quiz.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/summer-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/autumn-warm-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/winter-cool-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/lipstick-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/hair-color-guide.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/interview-wedding-styling.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/photo-tips-for-diagnosis.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/color-trends-2026.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/zh/guide/color-psychology-confidence.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Guide articles (de) -->
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/what-is-personal-color.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/spring-warm-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/warm-vs-cool-tone.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/how-accurate-is-ai-diagnosis.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/draping-vs-online-quiz.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/summer-cool-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/autumn-warm-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/winter-cool-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/lipstick-color-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/hair-color-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/interview-wedding-styling.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/photo-tips-for-diagnosis.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/color-trends-2026.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/de/guide/color-psychology-confidence.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
