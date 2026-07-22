@@ -13,6 +13,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://findyourpersonalcolor.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
@@ -26,6 +27,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://findyourpersonalcolor.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
@@ -39,6 +41,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://findyourpersonalcolor.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
@@ -52,6 +55,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://findyourpersonalcolor.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
@@ -65,6 +69,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://findyourpersonalcolor.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
   <url>
@@ -78,6 +83,21 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://findyourpersonalcolor.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://findyourpersonalcolor.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://findyourpersonalcolor.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://findyourpersonalcolor.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://findyourpersonalcolor.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://findyourpersonalcolor.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://findyourpersonalcolor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://findyourpersonalcolor.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://findyourpersonalcolor.com/en/"/>
   </url>
 
@@ -114,6 +134,12 @@
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/de/about.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/about.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -156,6 +182,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/privacy.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
   <!-- Terms pages -->
   <url>
@@ -194,6 +226,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/terms.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
   <!-- Contact pages -->
   <url>
@@ -228,6 +266,12 @@
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/de/contact.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/contact.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -780,6 +824,98 @@
   </url>
   <url>
     <loc>https://findyourpersonalcolor.com/de/guide/color-psychology-confidence.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Guide articles (pt) -->
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/what-is-personal-color.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/spring-warm-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/warm-vs-cool-tone.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/how-accurate-is-ai-diagnosis.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/draping-vs-online-quiz.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/summer-cool-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/autumn-warm-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/winter-cool-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/lipstick-color-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/hair-color-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/interview-wedding-styling.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/photo-tips-for-diagnosis.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/color-trends-2026.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://findyourpersonalcolor.com/pt/guide/color-psychology-confidence.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
