@@ -29,11 +29,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="guide.css">
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) with Consent Mode v2 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRBJH5C8SZ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
       gtag('js', new Date());
       gtag('config', 'G-MRBJH5C8SZ');
     </script>
@@ -116,5 +123,57 @@
         </div>
         <div class="fcopy">&copy; 2026 Find Your Personal Color. All rights reserved.</div>
     </footer>
+    <div id="consent-banner" class="consent-banner">
+        <div class="consent-banner-inner">
+            <p>This site uses cookies to improve your experience. <a href="/en/privacy.html">Learn more</a></p>
+            <div class="consent-banner-btns">
+                <button id="consent-reject" class="consent-btn consent-btn-secondary">Reject</button>
+                <button id="consent-accept" class="consent-btn consent-btn-primary">Accept</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .consent-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:var(--card,#FBF9F4);border-top:1px solid var(--border,rgba(43,36,32,0.12));padding:16px 20px;display:none;box-shadow:0 -4px 20px rgba(0,0,0,0.08);}
+        .consent-banner.show{display:block;}
+        .consent-banner-inner{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;}
+        .consent-banner p{margin:0;font-size:0.85rem;color:var(--ink-soft,#6E6156);flex:1;min-width:220px;}
+        .consent-banner a{color:var(--brand,#6B3F4D);text-decoration:underline;}
+        .consent-banner-btns{display:flex;gap:10px;flex-shrink:0;}
+        .consent-btn{padding:9px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;cursor:pointer;border:none;font-family:inherit;}
+        .consent-btn-primary{background:var(--ink,#2B2420);color:var(--canvas,#F3EFE6);}
+        .consent-btn-secondary{background:transparent;color:var(--ink-soft,#6E6156);border:1px solid var(--border-strong,rgba(43,36,32,0.22));}
+    </style>
+    <script>
+    (function(){
+        var KEY = 'cookie_consent';
+        var saved = localStorage.getItem(KEY);
+        function updateConsent(granted){
+            gtag('consent', 'update', {
+                'ad_storage': granted ? 'granted' : 'denied',
+                'ad_user_data': granted ? 'granted' : 'denied',
+                'ad_personalization': granted ? 'granted' : 'denied',
+                'analytics_storage': granted ? 'granted' : 'denied'
+            });
+        }
+        if (saved === 'granted') { updateConsent(true); }
+        else if (saved === 'denied') { updateConsent(false); }
+        else {
+            var b = document.getElementById('consent-banner');
+            if (b) b.classList.add('show');
+        }
+        var acceptBtn = document.getElementById('consent-accept');
+        var rejectBtn = document.getElementById('consent-reject');
+        if (acceptBtn) acceptBtn.addEventListener('click', function(){
+            localStorage.setItem(KEY, 'granted');
+            updateConsent(true);
+            document.getElementById('consent-banner').classList.remove('show');
+        });
+        if (rejectBtn) rejectBtn.addEventListener('click', function(){
+            localStorage.setItem(KEY, 'denied');
+            updateConsent(false);
+            document.getElementById('consent-banner').classList.remove('show');
+        });
+    })();
+    </script>
 </body>
 </html>
